@@ -30,3 +30,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
  create mode 100644 rnaseq_project/Lesson3_ Align_Reads.ipynb
 To github.com:hingelman/BifrostOmics.git
    1b48a57..a6c3854  main -> main
+[main 465ed19] Auto-sync Wed May 21 16:00:00 AEST 2025
+ 5 files changed, 203 insertions(+), 17 deletions(-)
+ create mode 100755 rnaseq_project/align_all_trimmed_parallel.sh
+To github.com:hingelman/BifrostOmics.git
+   a6c3854..465ed19  main -> main
