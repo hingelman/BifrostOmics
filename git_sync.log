@@ -3,3 +3,14 @@
  create mode 100644 git_sync.log
 To github.com:hingelman/BifrostOmics.git
    1d45f24..f9774d1  main -> main
+[main e134d18] Auto-sync Wed May 21 13:00:01 AEST 2025
+ 7 files changed, 61 insertions(+), 14 deletions(-)
+ create mode 100644 envs/environment.yml
+To github.com:hingelman/BifrostOmics.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:hingelman/BifrostOmics.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
