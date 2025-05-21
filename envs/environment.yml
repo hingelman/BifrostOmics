@@ -1,0 +1,40 @@
+# This environment file is intended for use on Windows 11 with WSL2 (Ubuntu) using Miniconda.
+# 
+# It sets up a bioinformatics work environment with JupyterLab (accessed via Chrome on Win11).
+# 
+# Packages include: Python 3.10, fastqc, multiqc, hisat2, star, subread, samtools, sra-tools,
+# entrez-direct, jupyterlab, and ipykernel.
+# 
+#  
+# To create the environment, run:
+#    conda env create -f environment.yml
+# And to activate it:
+#    conda activate bioinformaatika0
+# And Install the kernel for JupyterLab (if not already installed):
+#    conda install jupyterlab ipykernel -y
+#    python -m ipykernel install --user --name=bioinformaatika0
+#    
+#        
+#  full list of all the day0 packages in environment bioinformaatika0 can be found in the end of Day1_Setup_Test.ipynb
+#    
+#       
+name: bioinformaatika0
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+channel_priority: strict
+dependencies:
+  - python=3.10
+  - fastqc
+  - multiqc
+  - hisat2
+  - star
+  - subread
+  - samtools
+  - sra-tools
+  - entrez-direct
+  - jupyterlab
+  - ipykernel
+  - wget 
+  - ipywidgets

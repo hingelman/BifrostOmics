@@ -1,10 +1,10 @@
 #!/bin/bash
+# File: run_fastqc.sh
+# Location: rnaseq_project/raw_data/
 
-# Exit on error
-set -e
+mkdir -p ../fastqc_results
 
-# Find all fastq or fastq.gz files in subdirectories
-find . -type f \( -name "*.fastq" -o -name "*.fastq.gz" \) | sort | while read file; do
-    echo "Running FastQC on $file"
-    fastqc "$file"
+find . -name "*.fastq.gz" | while read fq; do
+    echo "Running FastQC on $fq"
+    fastqc "$fq" -o ../fastqc_results
 done

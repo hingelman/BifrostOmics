@@ -13,3 +13,5 @@
 *.bai
 *.vcf
 *.vcf.gz
+# Ignore .ipynb_checkpoints/
+.ipynb_checkpoints/

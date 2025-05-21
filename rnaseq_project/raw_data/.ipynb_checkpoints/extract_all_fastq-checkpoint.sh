@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Location: rnaseq_project/raw_data/
 # Recursively find all .sra files inside raw_data and process them
 find -type f -name "*.sra" | while read sra_file; do
     echo "Processing $sra_file..."
