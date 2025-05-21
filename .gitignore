@@ -15,3 +15,8 @@
 *.vcf.gz
 # Ignore .ipynb_checkpoints/
 .ipynb_checkpoints/
+.fastqc_results/
+.trimmed_data/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints*
