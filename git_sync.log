@@ -35,3 +35,7 @@ To github.com:hingelman/BifrostOmics.git
  create mode 100755 rnaseq_project/align_all_trimmed_parallel.sh
 To github.com:hingelman/BifrostOmics.git
    a6c3854..465ed19  main -> main
+[main 71efdbe] Auto-sync Wed May 21 17:00:01 AEST 2025
+ 1 file changed, 5 insertions(+)
+To github.com:hingelman/BifrostOmics.git
+   465ed19..71efdbe  main -> main
