@@ -15,7 +15,7 @@
 #    python -m ipykernel install --user --name=bioinformaatika0
 #    
 #        
-#  full list of all the day0 packages in environment bioinformaatika0 can be found in the end of Day1_Setup_Test.ipynb
+#  full list of all the day0 packages in environment bioinformaatika0 can be found in the end of Lesson0_Setup_Test.ipynb
 #    
 #       
 name: bioinformaatika0

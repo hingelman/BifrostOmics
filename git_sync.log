@@ -14,3 +14,14 @@ hint: have locally. This is usually caused by another repository pushing to
 hint: the same ref. If you want to integrate the remote changes, use
 hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[main 0322f4d] Auto-sync Wed May 21 14:00:01 AEST 2025
+ 5 files changed, 133 insertions(+), 5 deletions(-)
+ create mode 100755 rnaseq_project/raw_data/extract_all_fastq_parallel.sh
+To github.com:hingelman/BifrostOmics.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:hingelman/BifrostOmics.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.

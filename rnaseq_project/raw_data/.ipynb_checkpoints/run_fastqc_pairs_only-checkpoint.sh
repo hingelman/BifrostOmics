@@ -11,7 +11,7 @@ find . -type f \( -name "*_1.fastq" -o -name "*_1.fastq.gz" \) | sort | while re
     # Check if R2 file exists
     if [[ -f "$r2" ]]; then
         echo "Running FastQC on: $r1 and $r2"
-        fastqc "$r1" "$r2"
+        fastqc "$r1" "$r2" -o ../fastqc_results
     else
         echo "Warning: Paired file not found for $r1"
     fi
