@@ -11,6 +11,9 @@
 *.sam
 *.bam
 *.bai
+*.ht2
+*.fna
+*.gff
 *.vcf
 *.vcf.gz
 # Ignore .ipynb_checkpoints/
