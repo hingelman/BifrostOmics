@@ -1,0 +1,15 @@
+# Ignore raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.fasta
+*.fasta.gz
+*.fa
+*.fa.gz
+*.sra
+*.sam
+*.bam
+*.bai
+*.vcf
+*.vcf.gz
