@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# File: download_all_runs.sh
+# Location: rnaseq_project/raw_data
 # Check if runinfo.csv exists
 if [[ ! -f "runinfo.csv" ]]; then
   echo "runinfo.csv not found in current directory"
