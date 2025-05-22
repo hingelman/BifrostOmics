@@ -130,3 +130,33 @@ Everything up-to-date
  create mode 100644 test/rnaseq_pipeline.sh:Zone.Identifier
 To github.com:hingelman/BifrostOmics.git
    caadd7e..484987a  main -> main
+[main a483bfb] Auto-sync Thu May 22 19:00:01 AEST 2025
+ 29 files changed, 43591 insertions(+)
+ create mode 100644 test/fastqc_results/SRR23426210_2_fastqc.html
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc-status-check-heatmap.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_adapter_content_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_overrepresented_sequences_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_per_base_n_content_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_per_base_sequence_quality_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Counts.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Percentages.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_quality_scores_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_sequence_counts_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_sequence_duplication_levels_plot.txt
+ create mode 100644 test/fastqc_results/multiqc_data/fastqc_top_overrepresented_sequences_table.txt
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc.log
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc_citations.txt
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc_data.json
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc_fastqc.txt
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc_general_stats.txt
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc_software_versions.txt
+ create mode 100644 test/fastqc_results/multiqc_data/multiqc_sources.txt
+ create mode 100644 test/fastqc_results/multiqc_report.html
+ create mode 100644 test/trimmed_data/SRR23426208.html
+ create mode 100644 test/trimmed_data/SRR23426208.json
+ create mode 100644 test/trimmed_data/SRR23426209.html
+ create mode 100644 test/trimmed_data/SRR23426209.json
+ create mode 100644 test/trimmed_data/SRR23426210.html
+ create mode 100644 test/trimmed_data/SRR23426210.json
+To github.com:hingelman/BifrostOmics.git
+   484987a..a483bfb  main -> main
