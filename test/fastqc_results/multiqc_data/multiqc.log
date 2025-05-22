@@ -1,0 +1,2 @@
+[2025-05-22 18:00:05,296] multiqc.core.file_search                           [INFO   ]  Search path: /home/henri/BifrostOmics/test/fastqc_results
+[2025-05-22 18:00:05,489] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports

@@ -170,7 +170,14 @@ align_sample() {
     r2="${r1/_1.trimmed.fastq.gz/_2.trimmed.fastq.gz}"
     sample=$(basename "$r1" | sed 's/_1\.trimmed\.fastq\.gz$//')
 
+    # Safety check
+    if [[ "$ALIGNMENTS_DIR" == "/" || -z "$ALIGNMENTS_DIR" ]]; then
+        echo "ERROR: ALIGNMENTS_DIR is not set correctly!"
+        exit 1
+    fi
+
     echo "Aligning sample: $sample"
+    echo "Output: $ALIGNMENTS_DIR/${sample}.sorted.bam"
 
     hisat2 -p 6 -x "$REFERENCE_DIR/hisat2_index/genome" \
         -1 "$r1" -2 "$r2" \

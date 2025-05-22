@@ -106,3 +106,27 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 Nothing to commit
 Everything up-to-date
+[main 484987a] Auto-sync Thu May 22 18:00:02 AEST 2025
+ 24 files changed, 17966 insertions(+), 114 deletions(-)
+ create mode 100755 rnaseq_project/rnaseq_pipeline.sh
+ create mode 100644 test/fastqc_results/SRR23426208_1_fastqc.html
+ create mode 100644 test/fastqc_results/SRR23426208_1_fastqc.zip
+ create mode 100644 test/fastqc_results/SRR23426208_2_fastqc.html
+ create mode 100644 test/fastqc_results/SRR23426208_2_fastqc.zip
+ create mode 100644 test/fastqc_results/SRR23426209_1_fastqc.html
+ create mode 100644 test/fastqc_results/SRR23426209_1_fastqc.zip
+ create mode 100644 test/fastqc_results/SRR23426209_2_fastqc.html
+ create mode 100644 test/fastqc_results/SRR23426209_2_fastqc.zip
+ create mode 100644 test/fastqc_results/SRR23426210_1_fastqc.html
+ create mode 100644 test/fastqc_results/SRR23426210_1_fastqc.zip
+ create mode 100644 test/fastqc_results/SRR23426210_2_fastqc.zip
+ create mode 100644 test/raw_data/runinfo.csv
+ create mode 100644 test/raw_data/runinfo.csv:Zone.Identifier
+ create mode 100644 test/reference/GCF_000484505.2_ASM48450v2_genomic.fna:Zone.Identifier
+ create mode 100644 test/reference/GCF_000484505.2_ASM48450v2_genomic.gff:Zone.Identifier
+ create mode 100644 test/reference/GCF_000484505.2_ASM48450v2_genomic.gtf
+ create mode 100644 test/reference/GCF_000484505.2_ASM48450v2_genomic.gtf:Zone.Identifier
+ create mode 100755 test/rnaseq_pipeline.sh
+ create mode 100644 test/rnaseq_pipeline.sh:Zone.Identifier
+To github.com:hingelman/BifrostOmics.git
+   caadd7e..484987a  main -> main
