@@ -1,5 +1,6 @@
 #!/bin/bash
 # Location: rnaseq_project/raw_data/
+# File: extract_all_fastq_parallel.sh
 # Recursively find all .sra files inside raw_data and process them
 # 
 # 

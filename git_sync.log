@@ -81,3 +81,28 @@ To github.com:hingelman/BifrostOmics.git
  1 file changed, 4 insertions(+)
 To github.com:hingelman/BifrostOmics.git
    3ca19b6..ec4422a  main -> main
+[main caadd7e] Auto-sync Thu May 22 16:00:01 AEST 2025
+ 2 files changed, 198 insertions(+), 1 deletion(-)
+ create mode 100644 rnaseq_project/Lesson5.ipynb
+To github.com:hingelman/BifrostOmics.git
+   9f9a204..caadd7e  main -> main
+fatal: unable to stat 'test/raw_data/SRR23426208/fasterq.tmp.t14l2ppar.268523/SRR23426208.t14l2ppar.268523.0001.2': No such file or directory
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_sync.log
+	modified:   rnaseq_project/Lesson2_QCandTrim.ipynb
+	modified:   rnaseq_project/Lesson5.ipynb
+	modified:   rnaseq_project/raw_data/extract_all_fastq_parallel.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	rnaseq_project/rnaseq_pipeline.sh
+	test/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Nothing to commit
+Everything up-to-date
