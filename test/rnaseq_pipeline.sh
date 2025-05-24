@@ -25,8 +25,31 @@
 #Must contain a header and Run column with SRR IDs
 
 
-
-
+######## TODO - 
+###
+###1-Avoid reprocessing
+###Add checks to skip steps that are already done, e.g.:
+###if [[ -f "$TRIMMED_DIR/${sample}_1.trimmed.fastq.gz" ]]; then
+###  echo "$sample already trimmed. Skipping."
+###  return
+###fi
+###Same for alignment and sorting.
+###
+###2-Better logging
+###Redirect stdout/stderr to logs per step:
+###
+###LOG_DIR="./logs"
+###mkdir -p "$LOG_DIR"
+###
+#### Example inside align_sample
+###{
+###  echo "Aligning $sample..."
+###  hisat2 ...
+###  samtools sort ...
+###  samtools index ...
+###} &> "$LOG_DIR/${sample}.align.log"
+###3-add DESeq2 + plotting after featureCounts
+###4-convert this to a Snakemake pipeline
 
 set -e  # Exit on any error
 for cmd in prefetch fasterq-dump pigz fastqc multiqc fastp hisat2 samtools featureCounts parallel; do
@@ -61,18 +84,31 @@ fi
 #############################
 # STEP 2: Download SRA files
 #############################
+SECONDS=0
 echo "Downloading SRA files..."
 cd "$RAW_DIR"
+
 SRR_IDS=$(awk -F, 'NR>1 {print $1}' runinfo.csv)
+
 for srr in $SRR_IDS; do
   echo "Downloading $srr..."
   prefetch "$srr"
 done
+
+
+# Flatten if inside subfolders
+find "$RAW_DIR" -type f -name "*.sra" -exec mv {} "$RAW_DIR" \;
+
+
 cd -
+echo "Step took $SECONDS seconds."
+
 
 #############################
 # STEP 3: Extract FASTQ in parallel
 #############################
+SECONDS=0
+echo "Exctracting FASTQ files"
 process_sra() {
     sra_file="$1"
     sra_dir=$(dirname "$sra_file")
@@ -91,7 +127,7 @@ find "$RAW_DIR" -type f -name "*.sra" -print0 | \
     parallel -0 --jobs 4 --load 100% process_sra
 
 echo "All .sra files processed."
-
+echo "Step took $SECONDS seconds."
 #############################
 # STEP 4: FastQC + MultiQC
 #############################
@@ -151,7 +187,7 @@ echo "All trimming jobs completed."
 if [[ ! -d "$REFERENCE_DIR/hisat2_index" ]]; then
   echo "Building HISAT2 index..."
   mkdir -p "$REFERENCE_DIR/hisat2_index"
-  hisat2-build -p 6 "$FASTA" "$REFERENCE_DIR/hisat2_index/genome"
+  hisat2-build "$FASTA" "$REFERENCE_DIR/hisat2_index/genome"
 else
   echo "HISAT2 index already exists. Skipping indexing step."
 fi
@@ -160,10 +196,6 @@ fi
 #############################
 # STEP 7: Align Reads to Genome
 #############################
-if [[ "$ALIGNMENTS_DIR" == "/" || -z "$ALIGNMENTS_DIR" ]]; then
-    echo "ERROR: ALIGNMENTS_DIR is unsafe or not set!"
-    exit 1
-fi
 
 align_sample() {
     r1="$1"
