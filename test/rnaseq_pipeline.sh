@@ -65,6 +65,7 @@ done
 #############################
 # STEP 1: Check for required input files
 #############################
+
 REFERENCE_DIR="./reference"
 RAW_DIR="./raw_data"
 TRIMMED_DIR="./trimmed_data"
@@ -92,6 +93,7 @@ fi
 #############################
 # STEP 2: Download SRA files
 #############################
+
 SECONDS=0
 echo "Downloading SRA files..."
 cd "$RAW_DIR"
@@ -109,10 +111,10 @@ find "$RAW_DIR" -type f -name "*.sra" -exec mv {} "$RAW_DIR" \;
 
 echo "Step took $SECONDS seconds."
 
-
 #############################
 # STEP 3: Extract FASTQ in parallel
 #############################
+
 SECONDS=0
 
 process_sra() {
@@ -138,6 +140,7 @@ echo "All .sra files processed. Step took $SECONDS seconds."
 #############################
 # STEP 4: FastQC + MultiQC
 #############################
+
 echo "Running FastQC and MultiQC..."
 SECONDS=0
 
@@ -152,9 +155,11 @@ multiqc .
 cd - > /dev/null || exit 1
 
 echo "FastQC and MultiQC reports created. Step took $SECONDS seconds."
+
 #############################
 # STEP 5: Trim Reads in Parallel
 #############################
+
 echo "Found $(find "$RAW_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l) samples for trimming"
 echo "Trimming reads"
 SECONDS=0
@@ -198,12 +203,15 @@ echo "All trimming jobs completed. Step took $SECONDS seconds."
 #############################
 # STEP 6: Genome Indexing (if needed)
 #############################
+
 if [[ ! -d "$REFERENCE_DIR/hisat2_index" ]]; then
   echo "Building HISAT2 index..."
   SECONDS=0
   mkdir -p "$REFERENCE_DIR/hisat2_index"
   hisat2-build "$FASTA" "$REFERENCE_DIR/hisat2_index/genome"
+  
   echo "HISAT2 index created under /reference/hisat2_index/genome. Step took $SECONDS seconds."
+  
 else
   echo "HISAT2 index already exists. Skipping indexing step."
 fi
@@ -212,6 +220,7 @@ fi
 #############################
 # STEP 7: Align Reads to Genome
 #############################
+
 echo "Aligning reads to genome"
 SECONDS=0
 align_sample() {
@@ -241,19 +250,37 @@ export REFERENCE_DIR
 
 find "$TRIMMED_DIR" -name "*_1.trimmed.fastq.gz" | \
         parallel --jobs $(( $(nproc) / 2 )) align_sample
+        
 echo "Aligned reads to genome. Step took $SECONDS seconds."
+
 #############################
 # STEP 8: Read Counting with featureCounts
 #############################
+
+if [[ ! -f "$COUNTS_DIR/gene_counts.txt" ]]; then
 echo "Read Counting with featureCounts"
 SECONDS=0
 mkdir -p "$COUNTS_DIR"
 BAM_FILES=$(find "$ALIGNMENTS_DIR" -name "*.sorted.bam" | tr '\n' ' ')
-featureCounts -p -T 8 -a "$GTF" -t exon -g gene_id -o "$COUNTS_DIR/gene_counts.txt" "$BAM_FILES"
+featureCounts \
+  -T 8 \
+  -p \
+  -t exon \
+  -g gene_id \
+  -a "$GTF" \
+  -o "$COUNTS_DIR/gene_counts.txt" \
+  "$ALIGNMENTS_DIR"/*.sorted.bam
+  
 echo "Saving sample names to $COUNTS_DIR/samples.txt"
+
 find "$TRIMMED_DIR" -name "*_1.trimmed.fastq.gz" | sed 's|.*/||; s|_1.trimmed.fastq.gz||' > "$COUNTS_DIR/samples.txt"
+
 echo "Read Counting with featureCounts done. Step took $SECONDS seconds"
 
+else
+  echo "featureCounts already run. Skipping."
+fi
 
 #############################
+
 echo "RNA-seq data processing pipeline complete."
