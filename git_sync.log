@@ -160,3 +160,7 @@ To github.com:hingelman/BifrostOmics.git
  create mode 100644 test/trimmed_data/SRR23426210.json
 To github.com:hingelman/BifrostOmics.git
    484987a..a483bfb  main -> main
+[main 060a8ae] Auto-sync Thu May 22 20:00:02 AEST 2025
+ 13 files changed, 44 insertions(+), 13 deletions(-)
+To github.com:hingelman/BifrostOmics.git
+   a483bfb..060a8ae  main -> main
