@@ -51,6 +51,12 @@
 ###3-add DESeq2 + plotting after featureCounts
 ###4-convert this to a Snakemake pipeline
 
+
+
+# Start logging all output (stdout and stderr) to a file, *and* also print to terminal
+exec > >(tee -i rnaseq_pipeline.log)
+exec 2>&1
+
 set -e  # Exit on any error
 for cmd in prefetch fasterq-dump pigz fastqc multiqc fastp hisat2 samtools featureCounts parallel; do
     command -v $cmd >/dev/null 2>&1 || { echo >&2 "$cmd not found in PATH. Aborting."; exit 1; }
@@ -67,6 +73,8 @@ ALIGNMENTS_DIR="./alignments"
 COUNTS_DIR="./counts"
 
 mkdir -p "$RAW_DIR" "$TRIMMED_DIR" "$FASTQC_DIR" "$ALIGNMENTS_DIR" "$COUNTS_DIR"
+
+set -eo pipefail
 
 if [[ ! -f "$RAW_DIR/runinfo.csv" ]]; then
   echo "runinfo.csv not found in $RAW_DIR"
@@ -94,13 +102,11 @@ for srr in $SRR_IDS; do
   echo "Downloading $srr..."
   prefetch "$srr"
 done
-
+cd - > /dev/null || exit 1
 
 # Flatten if inside subfolders
 find "$RAW_DIR" -type f -name "*.sra" -exec mv {} "$RAW_DIR" \;
 
-
-cd -
 echo "Step took $SECONDS seconds."
 
 
@@ -108,7 +114,7 @@ echo "Step took $SECONDS seconds."
 # STEP 3: Extract FASTQ in parallel
 #############################
 SECONDS=0
-echo "Exctracting FASTQ files"
+
 process_sra() {
     sra_file="$1"
     sra_dir=$(dirname "$sra_file")
@@ -123,27 +129,35 @@ process_sra() {
 }
 export -f process_sra
 
+echo "Extracting FASTQ files"
 find "$RAW_DIR" -type f -name "*.sra" -print0 | \
     parallel -0 --jobs 4 --load 100% process_sra
 
-echo "All .sra files processed."
-echo "Step took $SECONDS seconds."
+echo "All .sra files processed. Step took $SECONDS seconds."
+
 #############################
 # STEP 4: FastQC + MultiQC
 #############################
+echo "Running FastQC and MultiQC..."
+SECONDS=0
+
 find "$RAW_DIR" -name "*.fastq.gz" | while read fq; do
     echo "Running FastQC on $fq"
+ 
     fastqc "$fq" -o "$FASTQC_DIR"
 done
 
 cd "$FASTQC_DIR"
 multiqc .
-cd -
+cd - > /dev/null || exit 1
 
+echo "FastQC and MultiQC reports created. Step took $SECONDS seconds."
 #############################
 # STEP 5: Trim Reads in Parallel
 #############################
 echo "Found $(find "$RAW_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l) samples for trimming"
+echo "Trimming reads"
+SECONDS=0
 
 process_sample() {
     local folder="$1"
@@ -179,15 +193,17 @@ export RAW_DIR
 find "$RAW_DIR" -mindepth 1 -maxdepth 1 -type d | \
     parallel --jobs $(( $(nproc) / 2 )) --load 100% process_sample
 
-echo "All trimming jobs completed."
+echo "All trimming jobs completed. Step took $SECONDS seconds."
 
 #############################
 # STEP 6: Genome Indexing (if needed)
 #############################
 if [[ ! -d "$REFERENCE_DIR/hisat2_index" ]]; then
   echo "Building HISAT2 index..."
+  SECONDS=0
   mkdir -p "$REFERENCE_DIR/hisat2_index"
   hisat2-build "$FASTA" "$REFERENCE_DIR/hisat2_index/genome"
+  echo "HISAT2 index created under /reference/hisat2_index/genome. Step took $SECONDS seconds."
 else
   echo "HISAT2 index already exists. Skipping indexing step."
 fi
@@ -196,7 +212,8 @@ fi
 #############################
 # STEP 7: Align Reads to Genome
 #############################
-
+echo "Aligning reads to genome"
+SECONDS=0
 align_sample() {
     r1="$1"
     r2="${r1/_1.trimmed.fastq.gz/_2.trimmed.fastq.gz}"
@@ -219,15 +236,24 @@ align_sample() {
 }
 
 export -f align_sample
+export ALIGNMENTS_DIR
+export REFERENCE_DIR
 
 find "$TRIMMED_DIR" -name "*_1.trimmed.fastq.gz" | \
-    parallel --jobs $(( $(nproc) / 2 )) align_sample
+        parallel --jobs $(( $(nproc) / 2 )) align_sample
+echo "Aligned reads to genome. Step took $SECONDS seconds."
 #############################
 # STEP 8: Read Counting with featureCounts
 #############################
+echo "Read Counting with featureCounts"
+SECONDS=0
+mkdir -p "$COUNTS_DIR"
 BAM_FILES=$(find "$ALIGNMENTS_DIR" -name "*.sorted.bam" | tr '\n' ' ')
-featureCounts -p -T 8 -a "$GTF" -t exon -g gene_id -o "$COUNTS_DIR/gene_counts.txt" $BAM_FILES
+featureCounts -p -T 8 -a "$GTF" -t exon -g gene_id -o "$COUNTS_DIR/gene_counts.txt" "$BAM_FILES"
 echo "Saving sample names to $COUNTS_DIR/samples.txt"
 find "$TRIMMED_DIR" -name "*_1.trimmed.fastq.gz" | sed 's|.*/||; s|_1.trimmed.fastq.gz||' > "$COUNTS_DIR/samples.txt"
+echo "Read Counting with featureCounts done. Step took $SECONDS seconds"
 
-echo "RNA-seq pipeline complete."
+
+#############################
+echo "RNA-seq data processing pipeline complete."

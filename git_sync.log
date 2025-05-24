@@ -172,3 +172,44 @@ To github.com:hingelman/BifrostOmics.git
  1 file changed, 4 insertions(+)
 To github.com:hingelman/BifrostOmics.git
    0034cb2..7f5ef36  main -> main
+[main 1885cd2] Auto-sync Sat May 24 17:00:01 AEST 2025
+ 39 files changed, 44 insertions(+), 44504 deletions(-)
+ delete mode 100644 test/fastqc_results/SRR23426208_1_fastqc.html
+ delete mode 100644 test/fastqc_results/SRR23426208_1_fastqc.zip
+ delete mode 100644 test/fastqc_results/SRR23426208_2_fastqc.html
+ delete mode 100644 test/fastqc_results/SRR23426208_2_fastqc.zip
+ delete mode 100644 test/fastqc_results/SRR23426209_1_fastqc.html
+ delete mode 100644 test/fastqc_results/SRR23426209_1_fastqc.zip
+ delete mode 100644 test/fastqc_results/SRR23426209_2_fastqc.html
+ delete mode 100644 test/fastqc_results/SRR23426209_2_fastqc.zip
+ delete mode 100644 test/fastqc_results/SRR23426210_1_fastqc.html
+ delete mode 100644 test/fastqc_results/SRR23426210_1_fastqc.zip
+ delete mode 100644 test/fastqc_results/SRR23426210_2_fastqc.html
+ delete mode 100644 test/fastqc_results/SRR23426210_2_fastqc.zip
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc-status-check-heatmap.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_adapter_content_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_overrepresented_sequences_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_base_n_content_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_base_sequence_quality_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Counts.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Percentages.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_quality_scores_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_sequence_counts_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_sequence_duplication_levels_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_top_overrepresented_sequences_table.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc.log
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_citations.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_data.json
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_fastqc.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_general_stats.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_software_versions.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_sources.txt
+ delete mode 100644 test/fastqc_results/multiqc_report.html
+ delete mode 100644 test/trimmed_data/SRR23426208.html
+ delete mode 100644 test/trimmed_data/SRR23426208.json
+ delete mode 100644 test/trimmed_data/SRR23426209.html
+ delete mode 100644 test/trimmed_data/SRR23426209.json
+ delete mode 100644 test/trimmed_data/SRR23426210.html
+ delete mode 100644 test/trimmed_data/SRR23426210.json
+To github.com:hingelman/BifrostOmics.git
+   7f5ef36..1885cd2  main -> main
