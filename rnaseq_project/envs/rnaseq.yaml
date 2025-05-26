@@ -1,15 +1,18 @@
 name: rnaseq
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
-  - sra-tools
-  - fastqc
-  - multiqc
-  - fastp
-  - hisat2
-  - samtools
-  - subread  # for featureCounts
+  - snakemake=7.32.4
+  - sra-tools=2.11.0
+  - fastqc=0.11.9
+  - multiqc=1.13
+  - fastp=0.22.0
+  - hisat2=2.2.1
+  - samtools=1.15
+  - subread=2.0.1
   - parallel
-  - pigz
+  - pigz=2.6
+  - libdeflate=1.17
+  - htslib=1.15

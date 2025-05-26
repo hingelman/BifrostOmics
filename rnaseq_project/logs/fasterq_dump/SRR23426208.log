@@ -1,0 +1,3 @@
+2025-05-26T07:56:21 fasterq-dump.2.11.0 err: name not found while resolving query within virtual file system module - failed to resolve accession 'raw_data/sra/SRR23426208/SRR23426208.sra' - Cannot resolve accession ( 404 )
+2025-05-26T07:56:21 fasterq-dump.2.11.0 err: invalid accession 'raw_data/sra/SRR23426208/SRR23426208.sra'
+fasterq-dump quit with error code 3
