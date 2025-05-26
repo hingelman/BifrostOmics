@@ -286,3 +286,11 @@ To github.com:hingelman/BifrostOmics.git
  create mode 100644 test/trimmed_data/SRR23426209.json
 To github.com:hingelman/BifrostOmics.git
    1c12559..1f9e881  main -> main
+[main 5431925] Auto-sync Mon May 26 14:00:01 AEST 2025
+ 16 files changed, 226 insertions(+), 36 deletions(-)
+ create mode 100644 rnaseq_project/rnaseq_pipeline.sh:Zone.Identifier
+ create mode 100644 test/counts/gene_counts.txt
+ create mode 100644 test/counts/gene_counts.txt.summary
+ create mode 100644 test/counts/samples.txt
+To github.com:hingelman/BifrostOmics.git
+   7943d49..5431925  main -> main
