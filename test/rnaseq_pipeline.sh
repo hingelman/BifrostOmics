@@ -106,9 +106,6 @@ for srr in $SRR_IDS; do
 done
 cd - > /dev/null || exit 1
 
-# Flatten if inside subfolders
-find "$RAW_DIR" -type f -name "*.sra" -exec mv {} "$RAW_DIR" \;
-
 echo "Step took $SECONDS seconds."
 
 #############################
@@ -120,7 +117,18 @@ SECONDS=0
 process_sra() {
     sra_file="$1"
     sra_dir=$(dirname "$sra_file")
+    sra_base=$(basename "$sra_file" .sra)
     cd "$sra_dir" || exit 1
+
+    # Check if both paired-end fastq.gz files exist
+    if [ -f "${sra_base}_1.fastq.gz" ] && [ -f "${sra_base}_2.fastq.gz" ]; then
+        echo "Skipping ${sra_base} - Paired FASTQ files already exist"
+        return 0
+    # Check if single-end fastq.gz exists
+    elif [ -f "${sra_base}.fastq.gz" ]; then
+        echo "Skipping ${sra_base} - Single-end FASTQ file already exists"
+        return 0
+    fi
 
     fasterq-dump "$(basename "$sra_file")" --threads 4
 
@@ -261,7 +269,16 @@ if [[ ! -f "$COUNTS_DIR/gene_counts.txt" ]]; then
 echo "Read Counting with featureCounts"
 SECONDS=0
 mkdir -p "$COUNTS_DIR"
-BAM_FILES=$(find "$ALIGNMENTS_DIR" -name "*.sorted.bam" | tr '\n' ' ')
+
+# Find all BAM files and assign to array
+mapfile -t BAM_FILES < <(find "$ALIGNMENTS_DIR" -name "*.sorted.bam")
+
+if [ ${#BAM_FILES[@]} -eq 0 ]; then
+  echo "No BAM files found in $ALIGNMENTS_DIR. Exiting."
+  exit 1
+fi
+
+# Run featureCounts on all BAM files
 featureCounts \
   -T 8 \
   -p \
@@ -269,7 +286,7 @@ featureCounts \
   -g gene_id \
   -a "$GTF" \
   -o "$COUNTS_DIR/gene_counts.txt" \
-  "$ALIGNMENTS_DIR"/*.sorted.bam
+  "${BAM_FILES[@]}"
   
 echo "Saving sample names to $COUNTS_DIR/samples.txt"
 

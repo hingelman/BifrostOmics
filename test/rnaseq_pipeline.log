@@ -1,74 +1,31 @@
 Downloading SRA files...
-Downloading SRR23426210...
-2025-05-24T09:43:28 prefetch.3.2.1: 1) Resolving 'SRR23426210'...
-2025-05-24T09:43:30 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
-2025-05-24T09:43:31 prefetch.3.2.1: 1) Downloading 'SRR23426210'...
-2025-05-24T09:43:31 prefetch.3.2.1:  SRA Normalized Format file is being retrieved
-2025-05-24T09:43:31 prefetch.3.2.1:  Downloading via HTTPS...
-2025-05-24T09:44:43 prefetch.3.2.1:  HTTPS download succeed
-2025-05-24T09:44:43 prefetch.3.2.1:  'SRR23426210' is valid: 412059587 bytes were streamed from 412043799
-2025-05-24T09:44:43 prefetch.3.2.1: 1) 'SRR23426210' was downloaded successfully
-2025-05-24T09:44:43 prefetch.3.2.1: 1) Resolving 'SRR23426210's dependencies...
-2025-05-24T09:44:44 prefetch.3.2.1: 'SRR23426210' has 0 unresolved dependencies
 Downloading SRR23426209...
-2025-05-24T09:44:44 prefetch.3.2.1: 1) Resolving 'SRR23426209'...
-2025-05-24T09:44:46 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
-2025-05-24T09:44:47 prefetch.3.2.1: 1) Downloading 'SRR23426209'...
-2025-05-24T09:44:47 prefetch.3.2.1:  SRA Normalized Format file is being retrieved
-2025-05-24T09:44:47 prefetch.3.2.1:  Downloading via HTTPS...
-2025-05-24T09:46:22 prefetch.3.2.1:  HTTPS download succeed
-2025-05-24T09:46:23 prefetch.3.2.1:  'SRR23426209' is valid: 417410691 bytes were streamed from 417399287
-2025-05-24T09:46:23 prefetch.3.2.1: 1) 'SRR23426209' was downloaded successfully
-2025-05-24T09:46:23 prefetch.3.2.1: 1) Resolving 'SRR23426209's dependencies...
-2025-05-24T09:46:23 prefetch.3.2.1: 'SRR23426209' has 0 unresolved dependencies
+2025-05-26T02:28:39 prefetch.3.2.1: 1) Resolving 'SRR23426209'...
+2025-05-26T02:28:41 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2025-05-26T02:28:42 prefetch.3.2.1: 1) 'SRR23426209' is found locally 
+2025-05-26T02:28:42 prefetch.3.2.1: 1) Resolving 'SRR23426209's dependencies...
+2025-05-26T02:28:42 prefetch.3.2.1: 'SRR23426209' has 0 unresolved dependencies
 Downloading SRR23426208...
-2025-05-24T09:46:23 prefetch.3.2.1: 1) Resolving 'SRR23426208'...
-2025-05-24T09:46:25 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
-2025-05-24T09:46:26 prefetch.3.2.1: 1) Downloading 'SRR23426208'...
-2025-05-24T09:46:26 prefetch.3.2.1:  SRA Normalized Format file is being retrieved
-2025-05-24T09:46:26 prefetch.3.2.1:  Downloading via HTTPS...
-2025-05-24T09:47:41 prefetch.3.2.1:  HTTPS download succeed
-2025-05-24T09:47:41 prefetch.3.2.1:  'SRR23426208' is valid: 416904890 bytes were streamed from 416897539
-2025-05-24T09:47:41 prefetch.3.2.1: 1) 'SRR23426208' was downloaded successfully
-2025-05-24T09:47:41 prefetch.3.2.1: 1) Resolving 'SRR23426208's dependencies...
-2025-05-24T09:47:42 prefetch.3.2.1: 'SRR23426208' has 0 unresolved dependencies
-Step took 254 seconds.
+2025-05-26T02:28:42 prefetch.3.2.1: 1) Resolving 'SRR23426208'...
+2025-05-26T02:28:45 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2025-05-26T02:28:46 prefetch.3.2.1: 1) 'SRR23426208' is found locally 
+2025-05-26T02:28:46 prefetch.3.2.1: 1) Resolving 'SRR23426208's dependencies...
+2025-05-26T02:28:46 prefetch.3.2.1: 'SRR23426208' has 0 unresolved dependencies
+Step took 7 seconds.
 Extracting FASTQ files
-spots read      : 9,960,187
-reads read      : 19,920,374
-reads written   : 19,920,374
-spots read      : 10,569,993
-reads read      : 21,139,986
-reads written   : 21,139,986
 spots read      : 10,035,504
 reads read      : 20,071,008
 reads written   : 20,071,008
-All .sra files processed. Step took 441 seconds.
+spots read      : 9,960,187
+reads read      : 19,920,374
+reads written   : 19,920,374
+All .sra files processed. Step took 180 seconds.
+Extracting FASTQ files
+Skipping SRR23426208 - Paired FASTQ files already exist
+Skipping SRR23426209 - Paired FASTQ files already exist
+All .sra files processed. Step took 0 seconds.
 Running FastQC and MultiQC...
-Running FastQC on ./raw_data/SRR23426209_1.fastq.gz
-application/gzip
-Started analysis of SRR23426209_1.fastq.gz
-Approx 5% complete for SRR23426209_1.fastq.gz
-Approx 10% complete for SRR23426209_1.fastq.gz
-Approx 15% complete for SRR23426209_1.fastq.gz
-Approx 20% complete for SRR23426209_1.fastq.gz
-Approx 25% complete for SRR23426209_1.fastq.gz
-Approx 30% complete for SRR23426209_1.fastq.gz
-Approx 35% complete for SRR23426209_1.fastq.gz
-Approx 40% complete for SRR23426209_1.fastq.gz
-Approx 45% complete for SRR23426209_1.fastq.gz
-Approx 50% complete for SRR23426209_1.fastq.gz
-Approx 55% complete for SRR23426209_1.fastq.gz
-Approx 60% complete for SRR23426209_1.fastq.gz
-Approx 65% complete for SRR23426209_1.fastq.gz
-Approx 70% complete for SRR23426209_1.fastq.gz
-Approx 75% complete for SRR23426209_1.fastq.gz
-Approx 80% complete for SRR23426209_1.fastq.gz
-Approx 85% complete for SRR23426209_1.fastq.gz
-Approx 90% complete for SRR23426209_1.fastq.gz
-Approx 95% complete for SRR23426209_1.fastq.gz
-Analysis complete for SRR23426209_1.fastq.gz
-Running FastQC on ./raw_data/SRR23426208_2.fastq.gz
+Running FastQC on ./raw_data/SRR23426208/SRR23426208_2.fastq.gz
 application/gzip
 Started analysis of SRR23426208_2.fastq.gz
 Approx 5% complete for SRR23426208_2.fastq.gz
@@ -91,7 +48,7 @@ Approx 85% complete for SRR23426208_2.fastq.gz
 Approx 90% complete for SRR23426208_2.fastq.gz
 Approx 95% complete for SRR23426208_2.fastq.gz
 Analysis complete for SRR23426208_2.fastq.gz
-Running FastQC on ./raw_data/SRR23426208_1.fastq.gz
+Running FastQC on ./raw_data/SRR23426208/SRR23426208_1.fastq.gz
 application/gzip
 Started analysis of SRR23426208_1.fastq.gz
 Approx 5% complete for SRR23426208_1.fastq.gz
@@ -114,7 +71,30 @@ Approx 85% complete for SRR23426208_1.fastq.gz
 Approx 90% complete for SRR23426208_1.fastq.gz
 Approx 95% complete for SRR23426208_1.fastq.gz
 Analysis complete for SRR23426208_1.fastq.gz
-Running FastQC on ./raw_data/SRR23426209_2.fastq.gz
+Running FastQC on ./raw_data/SRR23426209/SRR23426209_1.fastq.gz
+application/gzip
+Started analysis of SRR23426209_1.fastq.gz
+Approx 5% complete for SRR23426209_1.fastq.gz
+Approx 10% complete for SRR23426209_1.fastq.gz
+Approx 15% complete for SRR23426209_1.fastq.gz
+Approx 20% complete for SRR23426209_1.fastq.gz
+Approx 25% complete for SRR23426209_1.fastq.gz
+Approx 30% complete for SRR23426209_1.fastq.gz
+Approx 35% complete for SRR23426209_1.fastq.gz
+Approx 40% complete for SRR23426209_1.fastq.gz
+Approx 45% complete for SRR23426209_1.fastq.gz
+Approx 50% complete for SRR23426209_1.fastq.gz
+Approx 55% complete for SRR23426209_1.fastq.gz
+Approx 60% complete for SRR23426209_1.fastq.gz
+Approx 65% complete for SRR23426209_1.fastq.gz
+Approx 70% complete for SRR23426209_1.fastq.gz
+Approx 75% complete for SRR23426209_1.fastq.gz
+Approx 80% complete for SRR23426209_1.fastq.gz
+Approx 85% complete for SRR23426209_1.fastq.gz
+Approx 90% complete for SRR23426209_1.fastq.gz
+Approx 95% complete for SRR23426209_1.fastq.gz
+Analysis complete for SRR23426209_1.fastq.gz
+Running FastQC on ./raw_data/SRR23426209/SRR23426209_2.fastq.gz
 application/gzip
 Started analysis of SRR23426209_2.fastq.gz
 Approx 5% complete for SRR23426209_2.fastq.gz
@@ -137,326 +117,159 @@ Approx 85% complete for SRR23426209_2.fastq.gz
 Approx 90% complete for SRR23426209_2.fastq.gz
 Approx 95% complete for SRR23426209_2.fastq.gz
 Analysis complete for SRR23426209_2.fastq.gz
-Running FastQC on ./raw_data/SRR23426210_1.fastq.gz
-application/gzip
-Started analysis of SRR23426210_1.fastq.gz
-Approx 5% complete for SRR23426210_1.fastq.gz
-Approx 10% complete for SRR23426210_1.fastq.gz
-Approx 15% complete for SRR23426210_1.fastq.gz
-Approx 20% complete for SRR23426210_1.fastq.gz
-Approx 25% complete for SRR23426210_1.fastq.gz
-Approx 30% complete for SRR23426210_1.fastq.gz
-Approx 35% complete for SRR23426210_1.fastq.gz
-Approx 40% complete for SRR23426210_1.fastq.gz
-Approx 45% complete for SRR23426210_1.fastq.gz
-Approx 50% complete for SRR23426210_1.fastq.gz
-Approx 55% complete for SRR23426210_1.fastq.gz
-Approx 60% complete for SRR23426210_1.fastq.gz
-Approx 65% complete for SRR23426210_1.fastq.gz
-Approx 70% complete for SRR23426210_1.fastq.gz
-Approx 75% complete for SRR23426210_1.fastq.gz
-Approx 80% complete for SRR23426210_1.fastq.gz
-Approx 85% complete for SRR23426210_1.fastq.gz
-Approx 90% complete for SRR23426210_1.fastq.gz
-Approx 95% complete for SRR23426210_1.fastq.gz
-Analysis complete for SRR23426210_1.fastq.gz
-Running FastQC on ./raw_data/SRR23426210_2.fastq.gz
-application/gzip
-Started analysis of SRR23426210_2.fastq.gz
-Approx 5% complete for SRR23426210_2.fastq.gz
-Approx 10% complete for SRR23426210_2.fastq.gz
-Approx 15% complete for SRR23426210_2.fastq.gz
-Approx 20% complete for SRR23426210_2.fastq.gz
-Approx 25% complete for SRR23426210_2.fastq.gz
-Approx 30% complete for SRR23426210_2.fastq.gz
-Approx 35% complete for SRR23426210_2.fastq.gz
-Approx 40% complete for SRR23426210_2.fastq.gz
-Approx 45% complete for SRR23426210_2.fastq.gz
-Approx 50% complete for SRR23426210_2.fastq.gz
-Approx 55% complete for SRR23426210_2.fastq.gz
-Approx 60% complete for SRR23426210_2.fastq.gz
-Approx 65% complete for SRR23426210_2.fastq.gz
-Approx 70% complete for SRR23426210_2.fastq.gz
-Approx 75% complete for SRR23426210_2.fastq.gz
-Approx 80% complete for SRR23426210_2.fastq.gz
-Approx 85% complete for SRR23426210_2.fastq.gz
-Approx 90% complete for SRR23426210_2.fastq.gz
-Approx 95% complete for SRR23426210_2.fastq.gz
-Analysis complete for SRR23426210_2.fastq.gz
 
 /// MultiQC 🔍 v1.28
 
      version_check | MultiQC Version v1.29 now available!
        file_search | Search path: /home/henri/BifrostOmics/test/fastqc_results
 
-            fastqc | Found 6 reports
+            fastqc | Found 4 reports
 
      write_results | Data        : multiqc_data
      write_results | Report      : multiqc_report.html
            multiqc | MultiQC complete
-FastQC and MultiQC reports created. Step took 157 seconds.
-Found 3 samples for trimming
+FastQC and MultiQC reports created. Step took 122 seconds.
+Found 2 samples for trimming
 Trimming reads
-Missing input files for SRR23426208 — skipping
-Missing input files for SRR23426209 — skipping
-Missing input files for SRR23426210 — skipping
-All trimming jobs completed. Step took 0 seconds.
-Building HISAT2 index...
-Settings:
-  Output files: "./reference/hisat2_index/genome.*.ht2"
-  Line rate: 6 (line is 64 bytes)
-  Lines per side: 1 (side is 64 bytes)
-  Offset rate: 4 (one in 16)
-  FTable chars: 10
-  Strings: unpacked
-  Local offset rate: 3 (one in 8)
-  Local fTable chars: 6
-  Local sequence length: 57344
-  Local sequence overlap between two consecutive indexes: 1024
-  Endianness: little
-  Actual local endianness: little
-  Sanity checking: disabled
-  Assertions: disabled
-  Random seed: 0
-  Sizeofs: void*:8, int:4, long:8, size_t:8
-Input files DNA, FASTA:
-  ./reference/GCF_000484505.2_ASM48450v2_genomic.fna
-Reading reference sizes
-  Time reading reference sizes: 00:00:00
-Calculating joined length
-Writing header
-Reserving space for joined string
-Joining reference sequences
-  Time to join reference sequences: 00:00:00
-  Time to read SNPs and splice sites: 00:00:00
-Using parameters --bmax 817070 --dcv 1024
-  Doing ahead-of-time memory usage test
-  Passed!  Constructing with these parameters: --bmax 817070 --dcv 1024
-Constructing suffix-array element generator
-Building DifferenceCoverSample
-  Building sPrime
-  Building sPrimeOrder
-  V-Sorting samples
-  V-Sorting samples time: 00:00:00
-  Allocating rank array
-  Ranking v-sort output
-  Ranking v-sort output time: 00:00:00
-  Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:00
-  Sanity-checking and returning
-Building samples
-Reserving space for 12 sample suffixes
-Generating random suffixes
-QSorting 12 sample offsets, eliminating duplicates
-QSorting sample offsets, eliminating duplicates time: 00:00:00
-Multikey QSorting 12 samples
-  (Using difference cover)
-  Multikey QSorting samples time: 00:00:00
-Calculating bucket sizes
-Splitting and merging
-  Splitting and merging time: 00:00:00
-Split 1, merged 6; iterating...
-Splitting and merging
-  Splitting and merging time: 00:00:00
-Split 1, merged 1; iterating...
-Splitting and merging
-  Splitting and merging time: 00:00:00
-Avg bucket size: 544712 (target: 817069)
-Converting suffix-array elements to index image
-Allocating ftab, absorbFtab
-Entering GFM loop
-Getting block 1 of 8
-  Reserving size (817070) for bucket 1
-  Calculating Z arrays for bucket 1
-  Entering block accumulator loop for bucket 1:
-  bucket 1: 10%
-  bucket 1: 20%
-  bucket 1: 30%
-  bucket 1: 40%
-  bucket 1: 50%
-  bucket 1: 60%
-  bucket 1: 70%
-  bucket 1: 80%
-  bucket 1: 90%
-  bucket 1: 100%
-  Sorting block of length 134055 for bucket 1
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 134056 for bucket 1
-Getting block 2 of 8
-  Reserving size (817070) for bucket 2
-  Calculating Z arrays for bucket 2
-  Entering block accumulator loop for bucket 2:
-  bucket 2: 10%
-  bucket 2: 20%
-  bucket 2: 30%
-  bucket 2: 40%
-  bucket 2: 50%
-  bucket 2: 60%
-  bucket 2: 70%
-  bucket 2: 80%
-  bucket 2: 90%
-  bucket 2: 100%
-  Sorting block of length 783942 for bucket 2
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 783943 for bucket 2
-Getting block 3 of 8
-  Reserving size (817070) for bucket 3
-  Calculating Z arrays for bucket 3
-  Entering block accumulator loop for bucket 3:
-  bucket 3: 10%
-  bucket 3: 20%
-  bucket 3: 30%
-  bucket 3: 40%
-  bucket 3: 50%
-  bucket 3: 60%
-  bucket 3: 70%
-  bucket 3: 80%
-  bucket 3: 90%
-  bucket 3: 100%
-  Sorting block of length 555891 for bucket 3
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 555892 for bucket 3
-Getting block 4 of 8
-  Reserving size (817070) for bucket 4
-  Calculating Z arrays for bucket 4
-  Entering block accumulator loop for bucket 4:
-  bucket 4: 10%
-  bucket 4: 20%
-  bucket 4: 30%
-  bucket 4: 40%
-  bucket 4: 50%
-  bucket 4: 60%
-  bucket 4: 70%
-  bucket 4: 80%
-  bucket 4: 90%
-  bucket 4: 100%
-  Sorting block of length 746193 for bucket 4
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 746194 for bucket 4
-Getting block 5 of 8
-  Reserving size (817070) for bucket 5
-  Calculating Z arrays for bucket 5
-  Entering block accumulator loop for bucket 5:
-  bucket 5: 10%
-  bucket 5: 20%
-  bucket 5: 30%
-  bucket 5: 40%
-  bucket 5: 50%
-  bucket 5: 60%
-  bucket 5: 70%
-  bucket 5: 80%
-  bucket 5: 90%
-  bucket 5: 100%
-  Sorting block of length 701049 for bucket 5
-  (Using difference cover)
-  Sorting block time: 00:00:01
-Returning block of 701050 for bucket 5
-Getting block 6 of 8
-  Reserving size (817070) for bucket 6
-  Calculating Z arrays for bucket 6
-  Entering block accumulator loop for bucket 6:
-  bucket 6: 10%
-  bucket 6: 20%
-  bucket 6: 30%
-  bucket 6: 40%
-  bucket 6: 50%
-  bucket 6: 60%
-  bucket 6: 70%
-  bucket 6: 80%
-  bucket 6: 90%
-  bucket 6: 100%
-  Sorting block of length 221559 for bucket 6
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 221560 for bucket 6
-Getting block 7 of 8
-  Reserving size (817070) for bucket 7
-  Calculating Z arrays for bucket 7
-  Entering block accumulator loop for bucket 7:
-  bucket 7: 10%
-  bucket 7: 20%
-  bucket 7: 30%
-  bucket 7: 40%
-  bucket 7: 50%
-  bucket 7: 60%
-  bucket 7: 70%
-  bucket 7: 80%
-  bucket 7: 90%
-  bucket 7: 100%
-  Sorting block of length 660290 for bucket 7
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 660291 for bucket 7
-Getting block 8 of 8
-  Reserving size (817070) for bucket 8
-  Calculating Z arrays for bucket 8
-  Entering block accumulator loop for bucket 8:
-  bucket 8: 10%
-  bucket 8: 20%
-  bucket 8: 30%
-  bucket 8: 40%
-  bucket 8: 50%
-  bucket 8: 60%
-  bucket 8: 70%
-  bucket 8: 80%
-  bucket 8: 90%
-  bucket 8: 100%
-  Sorting block of length 554718 for bucket 8
-  (Using difference cover)
-  Sorting block time: 00:00:00
-Returning block of 554719 for bucket 8
-Exited GFM loop
-fchr[A]: 0
-fchr[C]: 1512662
-fchr[G]: 2178206
-fchr[T]: 2867395
-fchr[$]: 4357704
-Exiting GFM::buildToDisk()
-Returning from initFromVector
-Wrote 5647261 bytes to primary GFM file: ./reference/hisat2_index/genome.1.ht2
-Wrote 1089432 bytes to secondary GFM file: ./reference/hisat2_index/genome.2.ht2
-Re-opening _in1 and _in2 as input streams
-Returning from GFM constructor
-Returning from initFromVector
-Wrote 1925461 bytes to primary GFM file: ./reference/hisat2_index/genome.5.ht2
-Wrote 1109298 bytes to secondary GFM file: ./reference/hisat2_index/genome.6.ht2
-Re-opening _in5 and _in5 as input streams
-Returning from HGFM constructor
-Headers:
-    len: 4357704
-    gbwtLen: 4357705
-    nodes: 4357705
-    sz: 1089426
-    gbwtSz: 1089427
-    lineRate: 6
-    offRate: 4
-    offMask: 0xfffffff0
-    ftabChars: 10
-    eftabLen: 0
-    eftabSz: 0
-    ftabLen: 1048577
-    ftabSz: 4194308
-    offsLen: 272357
-    offsSz: 1089428
-    lineSz: 64
-    sideSz: 64
-    sideGbwtSz: 48
-    sideGbwtLen: 192
-    numSides: 22697
-    numLines: 22697
-    gbwtTotLen: 1452608
-    gbwtTotSz: 1452608
-    reverse: 0
-    linearFM: Yes
-Total time for call to driver() for forward index: 00:00:03
-HISAT2 index created under /reference/hisat2_index/genome. Step took 3 seconds.
+Trimming SRR23426209
+Input R1: ./raw_data/SRR23426209/SRR23426209_1.fastq.gz
+Input R2: ./raw_data/SRR23426209/SRR23426209_2.fastq.gz
+Output: ./trimmed_data/SRR23426209_1.trimmed.fastq.gz
+Detecting adapter sequence for read1...
+CATTATCACCAGAAAATAAATTTATAATTGTAACAGGTCCTTTAACTGGAGCTCCGGTTC
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 9960187
+total bases: 756974212
+Q20 bases: 701144919(92.6247%)
+Q30 bases: 679055799(89.7066%)
+
+Read2 before filtering:
+total reads: 9960187
+total bases: 756974212
+Q20 bases: 664148952(87.7373%)
+Q30 bases: 629705714(83.1872%)
+
+Read1 after filtering:
+total reads: 9488610
+total bases: 719594031
+Q20 bases: 673615287(93.6105%)
+Q30 bases: 653862889(90.8655%)
+
+Read2 after filtering:
+total reads: 9488610
+total bases: 719689318
+Q20 bases: 644477806(89.5494%)
+Q30 bases: 612924984(85.1652%)
+
+Filtering result:
+reads passed filter: 18977220
+reads failed due to low quality: 941192
+reads failed due to too many N: 1488
+reads failed due to too short: 474
+reads with adapter trimmed: 251914
+bases trimmed due to adapters: 3086916
+
+Duplication rate: 24.4703%
+
+Insert size peak (evaluated by paired-end reads): 114
+
+JSON report: ./trimmed_data/SRR23426209.json
+HTML report: ./trimmed_data/SRR23426209.html
+
+fastp -i ./raw_data/SRR23426209/SRR23426209_1.fastq.gz -I ./raw_data/SRR23426209/SRR23426209_2.fastq.gz -o ./trimmed_data/SRR23426209_1.trimmed.fastq.gz -O ./trimmed_data/SRR23426209_2.trimmed.fastq.gz --detect_adapter_for_pe --thread 2 --html ./trimmed_data/SRR23426209.html --json ./trimmed_data/SRR23426209.json 
+fastp v0.24.1, time used: 110 seconds
+Trimming SRR23426208
+Input R1: ./raw_data/SRR23426208/SRR23426208_1.fastq.gz
+Input R2: ./raw_data/SRR23426208/SRR23426208_2.fastq.gz
+Output: ./trimmed_data/SRR23426208_1.trimmed.fastq.gz
+Detecting adapter sequence for read1...
+ATAAAATAATCATGTAACTGGCGGAAATGGAGTTTACCATAGGGAGCATGATTAAAAAAG
+
+Detecting adapter sequence for read2...
+No adapter detected for read2
+
+Read1 before filtering:
+total reads: 10035504
+total bases: 762698304
+Q20 bases: 705220245(92.4639%)
+Q30 bases: 682652362(89.5049%)
+
+Read2 before filtering:
+total reads: 10035504
+total bases: 762698304
+Q20 bases: 673267196(88.2744%)
+Q30 bases: 639579695(83.8575%)
+
+Read1 after filtering:
+total reads: 9580480
+total bases: 725972703
+Q20 bases: 678196829(93.4191%)
+Q30 bases: 657843151(90.6154%)
+
+Read2 after filtering:
+total reads: 9580480
+total bases: 726537283
+Q20 bases: 654297074(90.0569%)
+Q30 bases: 623374984(85.8008%)
+
+Filtering result:
+reads passed filter: 19160960
+reads failed due to low quality: 906460
+reads failed due to too many N: 1436
+reads failed due to too short: 2152
+reads with adapter trimmed: 363546
+bases trimmed due to adapters: 3911911
+
+Duplication rate: 24.235%
+
+Insert size peak (evaluated by paired-end reads): 114
+
+JSON report: ./trimmed_data/SRR23426208.json
+HTML report: ./trimmed_data/SRR23426208.html
+
+fastp -i ./raw_data/SRR23426208/SRR23426208_1.fastq.gz -I ./raw_data/SRR23426208/SRR23426208_2.fastq.gz -o ./trimmed_data/SRR23426208_1.trimmed.fastq.gz -O ./trimmed_data/SRR23426208_2.trimmed.fastq.gz --detect_adapter_for_pe --thread 2 --html ./trimmed_data/SRR23426208.html --json ./trimmed_data/SRR23426208.json 
+fastp v0.24.1, time used: 111 seconds
+All trimming jobs completed. Step took 111 seconds.
+HISAT2 index already exists. Skipping indexing step.
 Aligning reads to genome
-Aligned reads to genome. Step took 0 seconds.
-Read Counting with featureCounts
-
-ERROR: invalid parameter: './alignments/*.sorted.bam'
-
+Aligning sample: SRR23426208
+Output: ./alignments/SRR23426208.sorted.bam
+9580480 reads; of these:
+  9580480 (100.00%) were paired; of these:
+    535955 (5.59%) aligned concordantly 0 times
+    6489361 (67.74%) aligned concordantly exactly 1 time
+    2555164 (26.67%) aligned concordantly >1 times
+    ----
+    535955 pairs aligned concordantly 0 times; of these:
+      24483 (4.57%) aligned discordantly 1 time
+    ----
+    511472 pairs aligned 0 times concordantly or discordantly; of these:
+      1022944 mates make up the pairs; of these:
+        530784 (51.89%) aligned 0 times
+        363214 (35.51%) aligned exactly 1 time
+        128946 (12.61%) aligned >1 times
+97.23% overall alignment rate
+[bam_sort_core] merging from 5 files and 2 in-memory blocks...
+Aligning sample: SRR23426209
+Output: ./alignments/SRR23426209.sorted.bam
+9488610 reads; of these:
+  9488610 (100.00%) were paired; of these:
+    547365 (5.77%) aligned concordantly 0 times
+    6103158 (64.32%) aligned concordantly exactly 1 time
+    2838087 (29.91%) aligned concordantly >1 times
+    ----
+    547365 pairs aligned concordantly 0 times; of these:
+      23040 (4.21%) aligned discordantly 1 time
+    ----
+    524325 pairs aligned 0 times concordantly or discordantly; of these:
+      1048650 mates make up the pairs; of these:
+        536279 (51.14%) aligned 0 times
+        363762 (34.69%) aligned exactly 1 time
+        148609 (14.17%) aligned >1 times
+97.17% overall alignment rate
+[bam_sort_core] merging from 6 files and 2 in-memory blocks...
+rnaseq_pipeline.sh: line 287: t: command not found
