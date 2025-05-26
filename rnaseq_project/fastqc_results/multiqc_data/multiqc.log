@@ -1,3 +1,0 @@
-[2025-05-26 13:09:09,949] multiqc.core.version_check                         [WARNING]  MultiQC Version v1.29 now available!
-[2025-05-26 13:09:09,950] multiqc.core.file_search                           [INFO   ]  Search path: /home/henri/BifrostOmics/test/fastqc_results
-[2025-05-26 13:09:10,103] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 4 reports

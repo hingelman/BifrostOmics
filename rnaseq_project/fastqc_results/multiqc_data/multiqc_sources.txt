@@ -1,5 +1,0 @@
-Module	Section	Sample Name	Source
-FastQC	all_sections	SRR23426208_1	/home/henri/BifrostOmics/test/fastqc_results/SRR23426208_1_fastqc.zip
-FastQC	all_sections	SRR23426209_1	/home/henri/BifrostOmics/test/fastqc_results/SRR23426209_1_fastqc.zip
-FastQC	all_sections	SRR23426209_2	/home/henri/BifrostOmics/test/fastqc_results/SRR23426209_2_fastqc.zip
-FastQC	all_sections	SRR23426208_2	/home/henri/BifrostOmics/test/fastqc_results/SRR23426208_2_fastqc.zip

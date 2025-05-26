@@ -298,3 +298,165 @@ To github.com:hingelman/BifrostOmics.git
  1 file changed, 8 insertions(+)
 To github.com:hingelman/BifrostOmics.git
    5431925..309958d  main -> main
+[main 9e1e490] Auto-sync Mon May 26 16:00:01 AEST 2025
+ 191 files changed, 79518 insertions(+), 79784 deletions(-)
+ rename {test => rnaseq_project}/counts/samples.txt (100%)
+ rename {test => rnaseq_project}/raw_data/runinfo - Copy.csv:Zone.Identifier (100%)
+ rename {test => rnaseq_project}/raw_data/runinfo.csv:Zone.Identifier (100%)
+ rename {test => rnaseq_project}/reference/GCF_000484505.2_ASM48450v2_genomic.fna:Zone.Identifier (100%)
+ rename {test => rnaseq_project}/reference/GCF_000484505.2_ASM48450v2_genomic.gff:Zone.Identifier (100%)
+ rename {test => rnaseq_project}/reference/GCF_000484505.2_ASM48450v2_genomic.gtf:Zone.Identifier (100%)
+ mode change 100755 => 100644 rnaseq_project/rnaseq_pipeline.sh
+ rename {rnaseq_project => rnaseq_project_old}/Lesson0_Setup_Test.ipynb (100%)
+ rename {rnaseq_project => rnaseq_project_old}/Lesson1_DataCheck.ipynb (100%)
+ rename {rnaseq_project => rnaseq_project_old}/Lesson2_QCandTrim.ipynb (100%)
+ rename {rnaseq_project => rnaseq_project_old}/Lesson3_ Align_Reads.ipynb (100%)
+ rename {rnaseq_project => rnaseq_project_old}/Lesson4.ipynb (100%)
+ rename {rnaseq_project => rnaseq_project_old}/Lesson5.ipynb (100%)
+ rename {rnaseq_project => rnaseq_project_old}/align_all_trimmed_parallel.sh (100%)
+ rename {rnaseq_project => rnaseq_project_old}/count_reads_featureCounts.sh (100%)
+ create mode 100644 rnaseq_project_old/counts/gene_counts.txt
+ create mode 100644 rnaseq_project_old/counts/gene_counts.txt.summary
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426208_1_fastqc.html (99%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426208_1_fastqc.zip (50%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426208_2_fastqc.html (99%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426208_2_fastqc.zip (50%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426209_1_fastqc.html (99%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426209_1_fastqc.zip (84%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426209_2_fastqc.html (99%)
+ rename {test => rnaseq_project_old}/fastqc_results/SRR23426209_2_fastqc.zip (57%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426210_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426210_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426210_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426210_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426211_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426211_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426211_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426211_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426212_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426212_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426212_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426212_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426213_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426213_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426213_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426213_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426214_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426214_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426214_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426214_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426215_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426215_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426215_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426215_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426216_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426216_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426216_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426216_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426217_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426217_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426217_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426217_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426218_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426218_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426218_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426218_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426219_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426219_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426219_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426219_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426220_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426220_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426220_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426220_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426221_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426221_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426221_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426221_2_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426222_1_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426222_1_fastqc.zip (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426222_2_fastqc.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/fastqc_results/SRR23426222_2_fastqc.zip (100%)
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc-status-check-heatmap.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_adapter_content_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_overrepresented_sequences_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_per_base_n_content_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_per_base_sequence_quality_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Counts.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Percentages.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_per_sequence_quality_scores_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_sequence_counts_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_sequence_duplication_levels_plot.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/fastqc_top_overrepresented_sequences_table.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/multiqc.log
+ rename {test => rnaseq_project_old}/fastqc_results/multiqc_data/multiqc_citations.txt (100%)
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/multiqc_data.json
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/multiqc_fastqc.txt
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/multiqc_general_stats.txt
+ rename {test => rnaseq_project_old}/fastqc_results/multiqc_data/multiqc_software_versions.txt (100%)
+ create mode 100644 rnaseq_project_old/fastqc_results/multiqc_data/multiqc_sources.txt
+ rename {test => rnaseq_project_old}/fastqc_results/multiqc_report.html (90%)
+ create mode 100644 rnaseq_project_old/lesson6.ipynb
+ rename {rnaseq_project => rnaseq_project_old}/raw_data/download_ALL_runs.sh (100%)
+ rename {rnaseq_project => rnaseq_project_old}/raw_data/extract_all_fastq.sh (100%)
+ rename {rnaseq_project => rnaseq_project_old}/raw_data/extract_all_fastq_parallel.sh (100%)
+ rename {rnaseq_project => rnaseq_project_old}/raw_data/run_fastqc.sh (100%)
+ rename {rnaseq_project => rnaseq_project_old}/raw_data/run_fastqc_pairs_only.sh (100%)
+ rename {rnaseq_project => rnaseq_project_old/raw_data}/runinfo.csv (100%)
+ rename {rnaseq_project => rnaseq_project_old}/raw_data/trim_all_fastq_parallel.sh (100%)
+ rename {test => rnaseq_project_old}/reference/GCF_000484505.2_ASM48450v2_genomic.gtf (100%)
+ rename {test => rnaseq_project_old}/rnaseq_pipeline.sh (100%)
+ rename {test => rnaseq_project_old}/rnaseq_pipeline.sh:Zone.Identifier (100%)
+ create mode 100644 rnaseq_project_old/runinfo.csv
+ rename {test => rnaseq_project_old}/trimmed_data/SRR23426208.html (99%)
+ rename {test => rnaseq_project_old}/trimmed_data/SRR23426208.json (99%)
+ rename {test => rnaseq_project_old}/trimmed_data/SRR23426209.html (99%)
+ rename {test => rnaseq_project_old}/trimmed_data/SRR23426209.json (99%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426210.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426210.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426211.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426211.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426212.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426212.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426213.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426213.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426214.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426214.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426215.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426215.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426216.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426216.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426217.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426217.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426218.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426218.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426219.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426219.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426220.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426220.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426221.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426221.json (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426222.html (100%)
+ rename {rnaseq_project => rnaseq_project_old}/trimmed_data/SRR23426222.json (100%)
+ delete mode 100644 test/counts/gene_counts.txt
+ delete mode 100644 test/counts/gene_counts.txt.summary
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc-status-check-heatmap.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_adapter_content_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_overrepresented_sequences_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_base_n_content_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_base_sequence_quality_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Counts.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_gc_content_plot_Percentages.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_per_sequence_quality_scores_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_sequence_counts_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_sequence_duplication_levels_plot.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/fastqc_top_overrepresented_sequences_table.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc.log
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_data.json
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_fastqc.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_general_stats.txt
+ delete mode 100644 test/fastqc_results/multiqc_data/multiqc_sources.txt
+ delete mode 100644 test/raw_data/runinfo.csv
+ delete mode 100644 test/rnaseq_pipeline.log
+To github.com:hingelman/BifrostOmics.git
+   309958d..9e1e490  main -> main

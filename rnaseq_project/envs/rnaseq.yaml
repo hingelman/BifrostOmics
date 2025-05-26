@@ -1,0 +1,15 @@
+name: rnaseq
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - sra-tools
+  - fastqc
+  - multiqc
+  - fastp
+  - hisat2
+  - samtools
+  - subread  # for featureCounts
+  - parallel
+  - pigz
