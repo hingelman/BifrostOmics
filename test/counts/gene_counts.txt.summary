@@ -1,0 +1,15 @@
+Status	./alignments/SRR23426209.sorted.bam	./alignments/SRR23426208.sorted.bam
+Assigned	1964189	1993823
+Unassigned_Unmapped	536279	530784
+Unassigned_Read_Type	0	0
+Unassigned_Singleton	0	0
+Unassigned_MappingQuality	0	0
+Unassigned_Chimera	0	0
+Unassigned_FragmentLength	0	0
+Unassigned_Duplicate	0	0
+Unassigned_MultiMapping	23352085	20145492
+Unassigned_Secondary	0	0
+Unassigned_NonSplit	0	0
+Unassigned_NoFeatures	10013296	10615554
+Unassigned_Overlapping_Length	0	0
+Unassigned_Ambiguity	638673	781525

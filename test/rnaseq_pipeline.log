@@ -1,25 +1,17 @@
 Downloading SRA files...
 Downloading SRR23426209...
-2025-05-26T02:28:39 prefetch.3.2.1: 1) Resolving 'SRR23426209'...
-2025-05-26T02:28:41 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
-2025-05-26T02:28:42 prefetch.3.2.1: 1) 'SRR23426209' is found locally 
-2025-05-26T02:28:42 prefetch.3.2.1: 1) Resolving 'SRR23426209's dependencies...
-2025-05-26T02:28:42 prefetch.3.2.1: 'SRR23426209' has 0 unresolved dependencies
+2025-05-26T03:06:49 prefetch.3.2.1: 1) Resolving 'SRR23426209'...
+2025-05-26T03:06:51 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2025-05-26T03:06:52 prefetch.3.2.1: 1) 'SRR23426209' is found locally 
+2025-05-26T03:06:52 prefetch.3.2.1: 1) Resolving 'SRR23426209's dependencies...
+2025-05-26T03:06:52 prefetch.3.2.1: 'SRR23426209' has 0 unresolved dependencies
 Downloading SRR23426208...
-2025-05-26T02:28:42 prefetch.3.2.1: 1) Resolving 'SRR23426208'...
-2025-05-26T02:28:45 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
-2025-05-26T02:28:46 prefetch.3.2.1: 1) 'SRR23426208' is found locally 
-2025-05-26T02:28:46 prefetch.3.2.1: 1) Resolving 'SRR23426208's dependencies...
-2025-05-26T02:28:46 prefetch.3.2.1: 'SRR23426208' has 0 unresolved dependencies
+2025-05-26T03:06:52 prefetch.3.2.1: 1) Resolving 'SRR23426208'...
+2025-05-26T03:06:54 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2025-05-26T03:06:55 prefetch.3.2.1: 1) 'SRR23426208' is found locally 
+2025-05-26T03:06:55 prefetch.3.2.1: 1) Resolving 'SRR23426208's dependencies...
+2025-05-26T03:06:55 prefetch.3.2.1: 'SRR23426208' has 0 unresolved dependencies
 Step took 7 seconds.
-Extracting FASTQ files
-spots read      : 10,035,504
-reads read      : 20,071,008
-reads written   : 20,071,008
-spots read      : 9,960,187
-reads read      : 19,920,374
-reads written   : 19,920,374
-All .sra files processed. Step took 180 seconds.
 Extracting FASTQ files
 Skipping SRR23426208 - Paired FASTQ files already exist
 Skipping SRR23426209 - Paired FASTQ files already exist
@@ -128,7 +120,7 @@ Analysis complete for SRR23426209_2.fastq.gz
      write_results | Data        : multiqc_data
      write_results | Report      : multiqc_report.html
            multiqc | MultiQC complete
-FastQC and MultiQC reports created. Step took 122 seconds.
+FastQC and MultiQC reports created. Step took 135 seconds.
 Found 2 samples for trimming
 Trimming reads
 Trimming SRR23426209
@@ -181,7 +173,7 @@ JSON report: ./trimmed_data/SRR23426209.json
 HTML report: ./trimmed_data/SRR23426209.html
 
 fastp -i ./raw_data/SRR23426209/SRR23426209_1.fastq.gz -I ./raw_data/SRR23426209/SRR23426209_2.fastq.gz -o ./trimmed_data/SRR23426209_1.trimmed.fastq.gz -O ./trimmed_data/SRR23426209_2.trimmed.fastq.gz --detect_adapter_for_pe --thread 2 --html ./trimmed_data/SRR23426209.html --json ./trimmed_data/SRR23426209.json 
-fastp v0.24.1, time used: 110 seconds
+fastp v0.24.1, time used: 115 seconds
 Trimming SRR23426208
 Input R1: ./raw_data/SRR23426208/SRR23426208_1.fastq.gz
 Input R2: ./raw_data/SRR23426208/SRR23426208_2.fastq.gz
@@ -232,8 +224,8 @@ JSON report: ./trimmed_data/SRR23426208.json
 HTML report: ./trimmed_data/SRR23426208.html
 
 fastp -i ./raw_data/SRR23426208/SRR23426208_1.fastq.gz -I ./raw_data/SRR23426208/SRR23426208_2.fastq.gz -o ./trimmed_data/SRR23426208_1.trimmed.fastq.gz -O ./trimmed_data/SRR23426208_2.trimmed.fastq.gz --detect_adapter_for_pe --thread 2 --html ./trimmed_data/SRR23426208.html --json ./trimmed_data/SRR23426208.json 
-fastp v0.24.1, time used: 111 seconds
-All trimming jobs completed. Step took 111 seconds.
+fastp v0.24.1, time used: 118 seconds
+All trimming jobs completed. Step took 118 seconds.
 HISAT2 index already exists. Skipping indexing step.
 Aligning reads to genome
 Aligning sample: SRR23426208
@@ -272,4 +264,68 @@ Output: ./alignments/SRR23426209.sorted.bam
         148609 (14.17%) aligned >1 times
 97.17% overall alignment rate
 [bam_sort_core] merging from 6 files and 2 in-memory blocks...
-rnaseq_pipeline.sh: line 287: t: command not found
+Aligned reads to genome. Step took 1326 seconds.
+Read Counting with featureCounts
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.1.1
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 2 BAM files                                      ||
+||                                                                            ||
+||                           SRR23426209.sorted.bam                           ||
+||                           SRR23426208.sorted.bam                           ||
+||                                                                            ||
+||             Output file : gene_counts.txt                                  ||
+||                 Summary : gene_counts.txt.summary                          ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : GCF_000484505.2_ASM48450v2_genomic.gtf (GTF)     ||
+||      Dir for temp files : ./counts                                         ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file GCF_000484505.2_ASM48450v2_genomic.gtf ...            ||
+||    Features : 101                                                          ||
+||    Meta-features : 101                                                     ||
+||    Chromosomes/contigs : 1                                                 ||
+||                                                                            ||
+|| Process BAM file SRR23426209.sorted.bam...                                 ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 36504522                                             ||
+||    Successfully assigned alignments : 1964189 (5.4%)                       ||
+||    Running time : 0.17 minutes                                             ||
+||                                                                            ||
+|| Process BAM file SRR23426208.sorted.bam...                                 ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 34067178                                             ||
+||    Successfully assigned alignments : 1993823 (5.9%)                       ||
+||    Running time : 0.17 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "./counts/gene_counts.tx  ||
+|| t.summary"                                                                 ||
+||                                                                            ||
+\\============================================================================//
+
+Saving sample names to ./counts/samples.txt
+Read Counting with featureCounts done. Step took 21 seconds
+RNA-seq data processing pipeline complete.

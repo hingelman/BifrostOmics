@@ -33,7 +33,7 @@
 ###  echo "$sample already trimmed. Skipping."
 ###  return
 ###fi
-###Same for alignment and sorting.
+###Same for alignment and sorting etc...
 ###
 ###2-Better logging
 ###Redirect stdout/stderr to logs per step:
@@ -49,6 +49,7 @@
 ###  samtools index ...
 ###} &> "$LOG_DIR/${sample}.align.log"
 ###3-add DESeq2 + plotting after featureCounts
+###
 ###4-convert this to a Snakemake pipeline
 
 
