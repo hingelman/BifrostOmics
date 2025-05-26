@@ -408,5 +408,5 @@
 		"overrepresented_sequences": {
 		}
 	},
-	"command": "fastp -i ./SRR23426208/SRR23426208_1.fastq.gz -I ./SRR23426208/SRR23426208_2.fastq.gz -o ../trimmed_data/SRR23426208_1.trimmed.fastq.gz -O ../trimmed_data/SRR23426208_2.trimmed.fastq.gz --detect_adapter_for_pe --thread 2 --html ../trimmed_data/SRR23426208.html --json ../trimmed_data/SRR23426208.json "
+	"command": "fastp -i ./raw_data/SRR23426208/SRR23426208_1.fastq.gz -I ./raw_data/SRR23426208/SRR23426208_2.fastq.gz -o ./trimmed_data/SRR23426208_1.trimmed.fastq.gz -O ./trimmed_data/SRR23426208_2.trimmed.fastq.gz --detect_adapter_for_pe --thread 2 --html ./trimmed_data/SRR23426208.html --json ./trimmed_data/SRR23426208.json "
 }

@@ -1,15 +1,15 @@
-Status	bam_files/SRR23426208.bam	bam_files/SRR23426209.bam	bam_files/SRR23426210.bam	bam_files/SRR23426211.bam	bam_files/SRR23426212.bam	bam_files/SRR23426213.bam	bam_files/SRR23426214.bam	bam_files/SRR23426215.bam	bam_files/SRR23426216.bam	bam_files/SRR23426217.bam	bam_files/SRR23426218.bam	bam_files/SRR23426219.bam	bam_files/SRR23426220.bam	bam_files/SRR23426221.bam	bam_files/SRR23426222.bam
-Assigned	11768690	11188388	13597057	11224849	10693347	13431608	11563293	10436464	11349676	12452057	15031154	13330183	11310556	11284451	12250831
-Unassigned_Unmapped	530784	536279	388131	352830	340754	434046	354163	563865	370214	405049	556522	477917	377220	733145	458842
-Unassigned_Read_Type	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_Singleton	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_MappingQuality	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_Chimera	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_FragmentLength	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_Duplicate	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_MultiMapping	20145492	23352085	19706509	17727351	24468798	21482218	17927933	20728287	19801243	21689291	18119223	21369940	18296196	21437936	22208122
-Unassigned_Secondary	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_NonSplit	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_NoFeatures	478088	528348	734410	651574	653155	716812	548557	681482	498782	1197224	2206065	894912	619978	790709	594579
-Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-Unassigned_Ambiguity	1144124	899422	817606	876610	909604	1042531	734768	1072156	871441	1092590	779270	907096	1127281	1273453	965712
+Status	./alignments/SRR23426209.sorted.bam	./alignments/SRR23426208.sorted.bam
+Assigned	1964189	1993823
+Unassigned_Unmapped	536279	530784
+Unassigned_Read_Type	0	0
+Unassigned_Singleton	0	0
+Unassigned_MappingQuality	0	0
+Unassigned_Chimera	0	0
+Unassigned_FragmentLength	0	0
+Unassigned_Duplicate	0	0
+Unassigned_MultiMapping	23352085	20145492
+Unassigned_Secondary	0	0
+Unassigned_NonSplit	0	0
+Unassigned_NoFeatures	10013296	10615554
+Unassigned_Overlapping_Length	0	0
+Unassigned_Ambiguity	638673	781525
