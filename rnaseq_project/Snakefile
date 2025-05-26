@@ -44,18 +44,18 @@ rule all:
 # Download SRA files
 rule prefetch_sra:
     output:
-        directory("raw_data/sra/{sample}")
+        "raw_data/sra/{sample}/{sample}.sra"
     log:
         "logs/prefetch/{sample}.log"
     conda:
         "envs/rnaseq.yaml"
     shell:
-        "prefetch {wildcards.sample} -O {output} > {log} 2>&1"
+        "prefetch {wildcards.sample} --output-file {output} > {log} 2>&1"
 
 # Extract FASTQ from SRA
 rule fasterq_dump:
     input:
-        "raw_data/sra/{sample}"
+        "raw_data/sra/{sample}/{sample}.sra"
     output:
         r1=temp("raw_data/fastq/{sample}_1.fastq"),
         r2=temp("raw_data/fastq/{sample}_2.fastq")
@@ -65,7 +65,7 @@ rule fasterq_dump:
         "envs/rnaseq.yaml"
     threads: 4
     shell:
-        "fasterq-dump {input}/{wildcards.sample}.sra "
+        "fasterq-dump {input} "
         "--threads {threads} "
         "--outdir $(dirname {output.r1}) > {log} 2>&1"
 

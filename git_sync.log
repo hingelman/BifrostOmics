@@ -511,3 +511,32 @@ To github.com:hingelman/BifrostOmics.git
  delete mode 100644 rnaseq_project_old/lesson6.ipynb
 To github.com:hingelman/BifrostOmics.git
    9e1e490..b850635  main -> main
+[main 8e7c426] Auto-sync Mon May 26 18:00:02 AEST 2025
+ 28 files changed, 1526 insertions(+), 122 deletions(-)
+ delete mode 100644 rnaseq_project/.snakemake/conda/1140583a64ec9c9d7e1635651fea9d8b_.yaml
+ delete mode 100644 rnaseq_project/.snakemake/conda/1140583a64ec9c9d7e1635651fea9d8b_/etc/aau_token
+ create mode 100644 rnaseq_project/.snakemake/conda/d70b245882a14d81a43872b2bbb65f86_.yaml
+ create mode 100644 rnaseq_project/.snakemake/incomplete/cmF3X2RhdGEvc3JhL1NSUjIzNDI2MjA5
+ delete mode 100644 rnaseq_project/.snakemake/locks/0.input.lock
+ delete mode 100644 rnaseq_project/.snakemake/locks/0.output.lock
+ delete mode 100644 rnaseq_project/.snakemake/log/2025-05-26T165841.164863.snakemake.log
+ create mode 100644 rnaseq_project/.snakemake/log/2025-05-26T174826.093692.snakemake.log
+ create mode 100644 rnaseq_project/.snakemake/log/2025-05-26T175445.652139.snakemake.log
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmF3X2RhdGEvc3JhL1NSUjIzNDI2MjA4
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuMS5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuMi5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuMy5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuNC5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuNS5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuNi5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuNy5odDI=
+ create mode 100644 rnaseq_project/.snakemake/metadata/cmVmZXJlbmNlL2hpc2F0Ml9pbmRleC9nZW5vbWUuOC5odDI=
+ create mode 100644 rnaseq_project/logs/fasterq_dump/SRR23426208.log
+ create mode 100644 rnaseq_project/logs/hisat2_index/build.log
+ create mode 100644 rnaseq_project/logs/prefetch/SRR23426208.log
+ create mode 100644 rnaseq_project/logs/prefetch/SRR23426209.log
+ rename rnaseq_project/{.snakemake/conda/1140583a64ec9c9d7e1635651fea9d8b_/env_setup_start => raw_data/sra/SRR23426208/.snakemake_timestamp} (100%)
+ create mode 100644 rnaseq_project/raw_data/sra/SRR23426209/SRR23426209/SRR23426209.sra.prf
+ create mode 100644 rnaseq_project/raw_data/sra/SRR23426209/SRR23426209/SRR23426209.sra.tmp
+To github.com:hingelman/BifrostOmics.git
+   b850635..8e7c426  main -> main
