@@ -1,2 +1,0 @@
-[2025-05-21 14:16:53,941] multiqc.core.file_search                           [INFO   ]  Search path: /home/henri/BifrostOmics/rnaseq_project/fastqc_results
-[2025-05-21 14:16:54,734] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 30 reports
