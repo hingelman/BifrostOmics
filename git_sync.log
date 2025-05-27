@@ -546,3 +546,21 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 Nothing to commit
 Everything up-to-date
+[main ff1383f] Auto-sync Tue May 27 15:00:01 AEST 2025
+ 15 files changed, 740 insertions(+)
+ create mode 100644 rnaseq2_offline_temp/Snakefile
+ create mode 100644 rnaseq2_offline_temp/config/config.yaml
+ create mode 100644 rnaseq2_offline_temp/envs/rnaseq.yaml
+ create mode 100644 rnaseq2_offline_temp/run_Snakemake_workflow.sh
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/Untitled.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts - Copy.txt:Zone.Identifier
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts.txt
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts.txt.summary
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts.txt.summary:Zone.Identifier
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts.txt:Zone.Identifier
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts_cleaned.txt
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/runinfo.csv
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/runinfo.csv:Zone.Identifier
+To github.com:hingelman/BifrostOmics.git
+   8588fb7..ff1383f  main -> main
