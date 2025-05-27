@@ -21,4 +21,4 @@
 **/.ipynb_checkpoints/
 **/fastqc_results/
 **/trimmed_data/
-**/.snakemake/
+**/.snakemake/git_sync.log
