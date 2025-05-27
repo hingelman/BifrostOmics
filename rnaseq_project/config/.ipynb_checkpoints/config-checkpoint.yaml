@@ -1,0 +1,32 @@
+# General settings
+samples: "raw_data/runinfo.csv"  # Path to SRA runinfo file
+
+# Directories
+reference_dir: "reference"
+raw_dir: "raw_data"
+trimmed_dir: "trimmed_data"
+fastqc_dir: "fastqc_results"
+alignments_dir: "alignments"
+counts_dir: "counts"
+logs_dir: "logs"
+
+# Resources
+threads:
+  fastqc: 2
+  fastp: 2
+  hisat2_build: 8
+  hisat2_align: 6
+  samtools_sort: 2
+  featurecounts: 8
+
+# Tool parameters
+fastp:
+  extra: "--detect_adapter_for_pe"
+
+hisat2:
+  extra: ""
+
+featurecounts:
+  feature_type: "exon"
+  attribute_type: "gene_id"
+  extra: "-p"  # paired-end
