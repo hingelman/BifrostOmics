@@ -1,15 +1,15 @@
-Status	alignments/SRR23426209.sorted.bam	alignments/SRR23426208.sorted.bam
-Assigned	1003290	1167135
-Unassigned_Unmapped	37890	41252
-Unassigned_Read_Type	0	0
-Unassigned_Singleton	0	0
-Unassigned_MappingQuality	0	0
-Unassigned_Chimera	0	0
-Unassigned_FragmentLength	0	0
-Unassigned_Duplicate	0	0
-Unassigned_MultiMapping	11976406	10328857
-Unassigned_Secondary	0	0
-Unassigned_NonSplit	0	0
-Unassigned_NoFeatures	5129712	5433862
-Unassigned_Overlapping_Length	0	0
-Unassigned_Ambiguity	337576	259785
+Status	alignments/SRR23426222.sorted.bam	alignments/SRR23426221.sorted.bam	alignments/SRR23426220.sorted.bam	alignments/SRR23426219.sorted.bam	alignments/SRR23426218.sorted.bam	alignments/SRR23426217.sorted.bam	alignments/SRR23426216.sorted.bam	alignments/SRR23426214.sorted.bam	alignments/SRR23426213.sorted.bam	alignments/SRR23426212.sorted.bam	alignments/SRR23426215.sorted.bam	alignments/SRR23426211.sorted.bam	alignments/SRR23426210.sorted.bam	alignments/SRR23426209.sorted.bam	alignments/SRR23426208.sorted.bam
+Assigned	1034160	1422002	1050285	908238	1176501	1105655	933591	835628	1074666	962480	1028677	804621	892436	1003299	1167060
+Unassigned_Unmapped	39700	40620	32924	39709	48452	37489	33859	35258	42023	31758	46307	32993	37499	37889	41252
+Unassigned_Read_Type	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	11326283	11107973	9304290	10899294	9264261	11029967	10081551	9119330	10940704	12419447	10635002	9024795	10005801	11976954	10328939
+Unassigned_Secondary	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	5743102	5136644	5287916	6566354	7794837	6162052	5265678	5461387	6320039	5041464	4936781	5430356	6627569	5129708	5433837
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	269666	351618	309641	242714	218687	224085	271993	233831	331274	220683	301969	248571	175727	337575	259763

@@ -564,3 +564,10 @@ Everything up-to-date
  create mode 100644 statisticalandfunctionalanalysis/fromweek1/runinfo.csv:Zone.Identifier
 To github.com:hingelman/BifrostOmics.git
    8588fb7..ff1383f  main -> main
+[main dec4fab] Auto-sync Tue May 27 16:00:01 AEST 2025
+ 6 files changed, 584 insertions(+), 125 deletions(-)
+ create mode 100644 rnaseq2_offline_temp/.ipynb_checkpoints/Snakefile-checkpoint
+ create mode 100644 rnaseq2_offline_temp/.ipynb_checkpoints/run_Snakemake_workflow-checkpoint.sh
+ create mode 100644 rnaseq2_offline_temp/Snakefile original
+To github.com:hingelman/BifrostOmics.git
+   ff1383f..dec4fab  main -> main
