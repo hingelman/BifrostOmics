@@ -1,0 +1,24 @@
+# Ignore raw sequencing and alignment data in any subdirectory
+**/*.fastq
+**/*.fastq.gz
+**/*.fq
+**/*.fq.gz
+**/*.fasta
+**/*.fasta.gz
+**/*.fa
+**/*.fa.gz
+**/*.sra
+**/*.sam
+**/*.bam
+**/*.bai
+**/*.ht2
+**/*.fna
+**/*.gff
+**/*.vcf
+**/*.vcf.gz
+
+# Ignore FastQC results and temporary files anywhere
+**/.ipynb_checkpoints/
+**/fastqc_results/
+**/trimmed_data/
+**/.snakemake/
