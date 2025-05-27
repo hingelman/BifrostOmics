@@ -571,3 +571,17 @@ To github.com:hingelman/BifrostOmics.git
  create mode 100644 rnaseq2_offline_temp/Snakefile original
 To github.com:hingelman/BifrostOmics.git
    ff1383f..dec4fab  main -> main
+[main 1b8b141] Auto-sync Tue May 27 17:00:01 AEST 2025
+ 14 files changed, 479 insertions(+), 235 deletions(-)
+ rename rnaseq2_offline_temp/{Snakefile => Snakefile from bam} (100%)
+ rename statisticalandfunctionalanalysis/.ipynb_checkpoints/{Untitled-checkpoint.ipynb => Lesson8-checkpoint.ipynb} (82%)
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/Lesson9-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/Untitled1-checkpoint.ipynb
+ rename statisticalandfunctionalanalysis/{Untitled.ipynb => Lesson8.ipynb} (82%)
+ create mode 100644 statisticalandfunctionalanalysis/Lesson9.ipynb
+ delete mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts - Copy.txt:Zone.Identifier
+ delete mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts_cleaned.txt
+ create mode 100644 statisticalandfunctionalanalysis/fromweek1/gene_counts_original.txt
+ create mode 100644 statisticalandfunctionalanalysis/normalized_counts.csv
+To github.com:hingelman/BifrostOmics.git
+   dec4fab..1b8b141  main -> main
