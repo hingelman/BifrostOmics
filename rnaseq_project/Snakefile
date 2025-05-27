@@ -30,8 +30,6 @@ for path in required_dirs:
 # Read sample information
 samples_df = pd.read_csv(config["samples"])
 SAMPLES = samples_df['Run'].tolist()
-print("Sample table:")
-print(samples_df.head())
 
 # Print debug info
 print("Samples found:", SAMPLES)
