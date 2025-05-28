@@ -585,3 +585,17 @@ To github.com:hingelman/BifrostOmics.git
  create mode 100644 statisticalandfunctionalanalysis/normalized_counts.csv
 To github.com:hingelman/BifrostOmics.git
    dec4fab..1b8b141  main -> main
+[main f58921a] Auto-sync Wed May 28 09:00:01 AEST 2025
+ 13 files changed, 365 insertions(+), 659 deletions(-)
+ delete mode 100644 rnaseq2_offline_temp/.ipynb_checkpoints/Snakefile-checkpoint
+ delete mode 100644 rnaseq2_offline_temp/.ipynb_checkpoints/run_Snakemake_workflow-checkpoint.sh
+ delete mode 100644 rnaseq2_offline_temp/Snakefile from bam
+ delete mode 100644 rnaseq2_offline_temp/Snakefile original
+ delete mode 100644 rnaseq2_offline_temp/config/config.yaml
+ delete mode 100644 rnaseq2_offline_temp/envs/rnaseq.yaml
+ delete mode 100644 rnaseq2_offline_temp/run_Snakemake_workflow.sh
+ create mode 100644 statisticalandfunctionalanalysis/DEG_UT2_D1nonSSvsUT2_D05.csv
+ create mode 100644 statisticalandfunctionalanalysis/PCA_plot.png
+ create mode 100644 statisticalandfunctionalanalysis/volcano_UT2_D1nonSSvsUT2_D05.pdf
+To github.com:hingelman/BifrostOmics.git
+   1b8b141..f58921a  main -> main
