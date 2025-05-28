@@ -1,0 +1,72 @@
+=== Differential Expression Analysis Log ===
+Date/Time: 2025-05-28 00:56:15 UTC
+User: hingelman
+PDF Directory: /home/henri/BifrostOmics/statisticalandfunctionalanalysis/condition_comparisons/volcano_plots_20250528_105817
+CSV Directory: /home/henri/BifrostOmics/statisticalandfunctionalanalysis/condition_comparisons/csv_files_20250528_105817
+
+Reference condition: UT2_D0.5
+
+All conditions:
+- UT2_D0.5 (reference)
+- UT1_D0.5
+- UT2_D1_Cotox
+- UT2_D1nonSS
+- UT3_D0.5
+
+Planned comparisons:
+Reference comparisons:
+- UT1_D0.5 vs UT2_D0.5
+- UT2_D1_Cotox vs UT2_D0.5
+- UT2_D1nonSS vs UT2_D0.5
+- UT3_D0.5 vs UT2_D0.5
+
+Other comparisons:
+- UT1_D0.5 vs UT2_D1_Cotox
+- UT1_D0.5 vs UT2_D1nonSS
+- UT1_D0.5 vs UT3_D0.5
+- UT2_D1_Cotox vs UT2_D1nonSS
+- UT2_D1_Cotox vs UT3_D0.5
+- UT2_D1nonSS vs UT3_D0.5
+
+Completed analysis for UT1_D0.5 vs UT2_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT1_D0_5vsUT2_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT1_D0_5vsUT2_D0_5.csv
+
+Completed analysis for UT2_D1_Cotox vs UT2_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT2_D1_CotoxvsUT2_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT2_D1_CotoxvsUT2_D0_5.csv
+
+Completed analysis for UT2_D1nonSS vs UT2_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT2_D1nonSSvsUT2_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT2_D1nonSSvsUT2_D0_5.csv
+
+Completed analysis for UT3_D0.5 vs UT2_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT3_D0_5vsUT2_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT3_D0_5vsUT2_D0_5.csv
+
+Completed analysis for UT1_D0.5 vs UT2_D1_Cotox
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT1_D0_5vsUT2_D1_Cotox.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT1_D0_5vsUT2_D1_Cotox.csv
+
+Completed analysis for UT1_D0.5 vs UT2_D1nonSS
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT1_D0_5vsUT2_D1nonSS.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT1_D0_5vsUT2_D1nonSS.csv
+
+Completed analysis for UT1_D0.5 vs UT3_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT1_D0_5vsUT3_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT1_D0_5vsUT3_D0_5.csv
+
+Completed analysis for UT2_D1_Cotox vs UT2_D1nonSS
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT2_D1_CotoxvsUT2_D1nonSS.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT2_D1_CotoxvsUT2_D1nonSS.csv
+
+Completed analysis for UT2_D1_Cotox vs UT3_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT2_D1_CotoxvsUT3_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT2_D1_CotoxvsUT3_D0_5.csv
+
+Completed analysis for UT2_D1nonSS vs UT3_D0.5
+- Volcano plot saved as: condition_comparisons/volcano_plots_20250528_105817/volcano_UT2_D1nonSSvsUT3_D0_5.pdf
+- Results saved as: condition_comparisons/csv_files_20250528_105817/DEG_UT2_D1nonSSvsUT3_D0_5.csv
+
+
+Analysis completed at 2025-05-28 00:56:15 UTC

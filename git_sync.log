@@ -599,3 +599,13 @@ To github.com:hingelman/BifrostOmics.git
  create mode 100644 statisticalandfunctionalanalysis/volcano_UT2_D1nonSSvsUT2_D05.pdf
 To github.com:hingelman/BifrostOmics.git
    1b8b141..f58921a  main -> main
+[main b289b74] Auto-sync Wed May 28 10:00:01 AEST 2025
+ 7 files changed, 269 insertions(+)
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/RNAseq_analysis-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/RNAseq_analysis.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/gene_counts.txt
+ create mode 100644 statisticalandfunctionalanalysis/gene_counts.txt:Zone.Identifier
+ create mode 100644 statisticalandfunctionalanalysis/runinfo.csv
+ create mode 100644 statisticalandfunctionalanalysis/runinfo.csv:Zone.Identifier
+To github.com:hingelman/BifrostOmics.git
+   f58921a..b289b74  main -> main
