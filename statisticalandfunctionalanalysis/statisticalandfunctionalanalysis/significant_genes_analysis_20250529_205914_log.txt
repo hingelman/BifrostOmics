@@ -1,0 +1,26 @@
+=== Significant Genes Analysis Log ===
+Date/Time (UTC): 2025-05-29 01:08:11
+User: hingelman
+Output Directory: /home/henri/BifrostOmics/statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_205914
+
+DESeq2 Object Information:
+- Number of genes: 101
+- Number of samples: 15
+- Design formula: ~physiological_state 
+- Reference level: UT2_D0.5 
+
+All conditions:
+- UT2_D0.5 (reference)
+- UT1_D0.5
+- UT2_D1_Cotox
+- UT2_D1nonSS
+- UT3_D0.5
+
+Analysis Parameters:
+- Significance cutoff (padj): < 0.05
+- Log2 fold change cutoff: >= 1 (absolute value)
+- Using alpha=1 in results() to get all genes
+
+Processing comparisons...
+
+Analyzing UT1_D0.5 vs UT2_D0.5:
