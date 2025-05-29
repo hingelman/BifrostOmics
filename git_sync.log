@@ -643,3 +643,19 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 Nothing to commit
 Everything up-to-date
+[main c5729e7] Auto-sync Thu May 29 11:00:01 AEST 2025
+ 14 files changed, 1027 insertions(+), 1 deletion(-)
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/Lesson8-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/RNAseq_analysis-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/extract_sig_genes-checkpoint.R
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/generate_volcanos-checkpoint.R
+ create mode 100644 statisticalandfunctionalanalysis/Untitled.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/extract_sig_genes.R
+ create mode 100644 statisticalandfunctionalanalysis/gene_counts.txt
+ create mode 100644 statisticalandfunctionalanalysis/gene_counts.txt:Zone.Identifier
+ create mode 100644 statisticalandfunctionalanalysis/runinfo.csv
+ create mode 100644 statisticalandfunctionalanalysis/runinfo.csv:Zone.Identifier
+ create mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_analysis_20250529_105722_log.txt
+To github.com:hingelman/BifrostOmics.git
+   caa9db8..c5729e7  main -> main

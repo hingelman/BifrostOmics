@@ -1,0 +1,187 @@
+=== Significant Genes Analysis Log ===
+Date/Time (UTC): 2025-05-29 01:00:05
+User: hingelman
+Output Directory: /home/henri/BifrostOmics/statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200
+
+DESeq2 Object Information:
+- Number of genes: 101
+- Number of samples: 15
+- Design formula: ~physiological_state 
+- Reference level: UT2_D0.5 
+
+All conditions:
+- UT2_D0.5 (reference)
+- UT1_D0.5
+- UT2_D1_Cotox
+- UT2_D1nonSS
+- UT3_D0.5
+
+Analysis Parameters:
+- Significance cutoff (padj): < 0.05
+- Log2 fold change cutoff: >= 1 (absolute value)
+
+Processing comparisons...
+
+Analyzing UT1_D0.5 vs UT2_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 0
+- Genes with |log2FC| >= 1: 15
+- Genes passing both filters: 0
+
+Analyzing UT2_D1_Cotox vs UT2_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 15
+- Genes with |log2FC| >= 1: 25
+- Genes passing both filters: 10
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1_CotoxvsUT2_D0_5.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS08555      -1.197087 7.964498e-14
+2 CAETHG_RS13830       2.450444 8.494017e-11
+3 CAETHG_RS12000       1.423818 3.643072e-09
+4 CAETHG_RS11990       1.103826 1.167087e-05
+5 CAETHG_RS05825       1.295913 2.662552e-04
+
+Analyzing UT2_D1nonSS vs UT2_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 1
+- Genes with |log2FC| >= 1: 9
+- Genes passing both filters: 0
+
+Analyzing UT3_D0.5 vs UT2_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 1
+- Genes with |log2FC| >= 1: 11
+- Genes passing both filters: 1
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT3_D0_5vsUT2_D0_5.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS14415       -1.49699 1.202129e-06
+
+Analyzing UT1_D0.5 vs UT2_D1_Cotox:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 24
+- Genes with |log2FC| >= 1: 27
+- Genes passing both filters: 13
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT1_D0_5vsUT2_D1_Cotox.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS13830      -3.493944 8.723225e-15
+2 CAETHG_RS08555       1.126922 6.579671e-11
+3 CAETHG_RS12000      -1.693180 2.970427e-10
+4 CAETHG_RS11990      -1.009473 2.728169e-04
+5 CAETHG_RS11995      -1.015363 6.371353e-04
+
+Analyzing UT1_D0.5 vs UT2_D1nonSS:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 5
+- Genes with |log2FC| >= 1: 21
+- Genes passing both filters: 2
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT1_D0_5vsUT2_D1nonSS.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange       padj
+1 CAETHG_RS13830      -1.492269 0.01801593
+2 CAETHG_RS18175      -1.590443 0.03453366
+
+Analyzing UT1_D0.5 vs UT3_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 1
+- Genes with |log2FC| >= 1: 19
+- Genes passing both filters: 1
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT1_D0_5vsUT3_D0_5.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS14415       1.379529 4.226139e-05
+
+Analyzing UT2_D1_Cotox vs UT2_D1nonSS:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 6
+- Genes with |log2FC| >= 1: 17
+- Genes passing both filters: 3
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1_CotoxvsUT2_D1nonSS.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS13830       2.001675 1.625595e-06
+2 CAETHG_RS12000       1.196773 2.592702e-06
+3 CAETHG_RS11385       3.185070 8.063655e-04
+
+Analyzing UT2_D1_Cotox vs UT3_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 24
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 10
+- Genes with |log2FC| >= 1: 26
+- Genes passing both filters: 7
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1_CotoxvsUT3_D0_5.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS08555      -1.152541 6.637899e-09
+2 CAETHG_RS13830       2.742877 1.157424e-08
+3 CAETHG_RS12000       1.377614 6.965223e-06
+4 CAETHG_RS14415       1.162568 2.808742e-04
+5 CAETHG_RS05825       1.378310 1.604982e-03
+
+Analyzing UT2_D1nonSS vs UT3_D0.5:
+- Getting DESeq2 results... done
+- Total genes in results: 101
+- NA values in padj: 0
+- NA values in log2FoldChange: 0
+Filtering steps:
+- Genes with padj < 0.05: 3
+- Genes with |log2FC| >= 1: 11
+- Genes passing both filters: 2
+- Results saved to: statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1nonSSvsUT3_D0_5.csv
+Top 5 most significant genes:
+         gene_id log2FoldChange         padj
+1 CAETHG_RS14415       1.499462 2.571050e-06
+2 CAETHG_RS14160       2.706645 1.614665e-02
+
+Overall Summary:
+Total number of comparisons: 10
+Results by comparison:
+- UT1_D0.5 vs UT2_D0.5: 0 significant genes (Up: 0, Down: 0)
+- UT2_D1_Cotox vs UT2_D0.5: 10 significant genes (Up: 5, Down: 5)
+- UT2_D1nonSS vs UT2_D0.5: 0 significant genes (Up: 0, Down: 0)
+- UT3_D0.5 vs UT2_D0.5: 1 significant genes (Up: 0, Down: 1)
+- UT1_D0.5 vs UT2_D1_Cotox: 13 significant genes (Up: 5, Down: 8)
+- UT1_D0.5 vs UT2_D1nonSS: 2 significant genes (Up: 0, Down: 2)
+- UT1_D0.5 vs UT3_D0.5: 1 significant genes (Up: 1, Down: 0)
+- UT2_D1_Cotox vs UT2_D1nonSS: 3 significant genes (Up: 3, Down: 0)
+- UT2_D1_Cotox vs UT3_D0.5: 7 significant genes (Up: 6, Down: 1)
+- UT2_D1nonSS vs UT3_D0.5: 2 significant genes (Up: 2, Down: 0)
+
+Analysis completed at 2025-05-29 01:00:05 UTC
