@@ -1,0 +1,20 @@
+=== Significant Genes Analysis Log ===
+Date/Time (UTC): 2025-05-29 10:57:22
+User: hingelman
+Output Directory: /home/henri/BifrostOmics/statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_105722
+
+Reference condition: UT2_D0.5
+
+All conditions:
+- UT2_D0.5 (reference)
+- UT1_D0.5
+- UT2_D1_Cotox
+- UT2_D1nonSS
+- UT3_D0.5
+
+Analysis Parameters:
+- Significance cutoff (padj): < 0.05
+- Log2 fold change cutoff: >= 1 (absolute value)
+
+Processing comparisons...
+
