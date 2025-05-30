@@ -707,3 +707,9 @@ To github.com:hingelman/BifrostOmics.git
  delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_analysis_20250529_205914_log.txt
 To github.com:hingelman/BifrostOmics.git
    b7ebfbd..9b44016  main -> main
+[main f20cff2] Auto-sync Fri May 30 11:00:01 AEST 2025
+ 3 files changed, 28 insertions(+)
+ create mode 100644 statisticalandfunctionalanalysis/.ipynb_checkpoints/Untitled1-checkpoint.ipynb
+ create mode 100644 statisticalandfunctionalanalysis/Untitled1.ipynb
+To github.com:hingelman/BifrostOmics.git
+   9b44016..f20cff2  main -> main
