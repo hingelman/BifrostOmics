@@ -1,10 +1,10 @@
-# Fixed timestamp and user
-timestamp <- "2025-05-29 01:08:11"
+# Fixed timestamp and user info
+timestamp <- "2025-05-29 11:21:38"
 user <- "hingelman"
 
 # Create output directory for significant genes
-base_dir <- "statisticalandfunctionalanalysis"
-sig_genes_dir <- file.path(base_dir, paste0("significant_genes_", format(Sys.time(), "%Y%m%d_%H%M%S")))
+base_dir <- "condition_comparisons"
+sig_genes_dir <- file.path(base_dir, paste0("significant_DE_genes", format(Sys.time(), "%Y%m%d_%H%M%S")))
 dir.create(sig_genes_dir, recursive = TRUE, showWarnings = FALSE)
 
 # Function to create safe filenames
@@ -23,58 +23,101 @@ all_combinations <- c(reference_combinations, other_combinations)
 
 # Function to extract significant genes
 analyze_deg <- function(condition_pair) {
-  condition1 <- condition_pair[1]
-  condition2 <- condition_pair[2]
-  
-  cat(sprintf("\nAnalyzing %s vs %s:\n", condition1, condition2))
-  
-  # Create safe filenames
-  safe_name1 <- make_safe_filename(condition1)
-  safe_name2 <- make_safe_filename(condition2)
-  
-  # Get results with alpha=1 to get all p-values
-  res <- results(dds, 
-                contrast = c("physiological_state", condition1, condition2),
-                alpha = 1)  # Get all results without filtering
-  
-  # Convert to data frame and add gene_id
-  sig_genes <- as.data.frame(res) %>%
-    rownames_to_column("gene_id") %>%
-    filter(!is.na(padj), !is.na(log2FoldChange)) %>%
-    filter(padj < 0.05, abs(log2FoldChange) >= 1) %>%
-    arrange(padj)
-  
-  # Add comparison information
-  sig_genes$comparison <- paste(condition1, "vs", condition2)
-  
-  # Save results
-  output_file <- file.path(sig_genes_dir, 
-                          paste0("significant_genes_", safe_name1, "vs", safe_name2, ".csv"))
-  write.csv(sig_genes, output_file, row.names = FALSE)
-  
-  # Print summary
-  cat(sprintf("- Total genes analyzed: %d\n", nrow(res)))
-  cat(sprintf("- Significant genes (padj < 0.05 & |log2FC| >= 1): %d\n", nrow(sig_genes)))
-  cat(sprintf("- Upregulated: %d\n", sum(sig_genes$log2FoldChange > 0)))
-  cat(sprintf("- Downregulated: %d\n", sum(sig_genes$log2FoldChange < 0)))
-  
-  # Print top 5 most significant genes
-  if(nrow(sig_genes) > 0) {
-    cat("\nTop 5 most significant genes:\n")
-    print(head(sig_genes[, c("gene_id", "log2FoldChange", "padj")], 5))
-  }
-  
-  return(list(
-    comparison = paste(condition1, "vs", condition2),
-    total_genes = nrow(res),
-    significant_genes = nrow(sig_genes),
-    upregulated = sum(sig_genes$log2FoldChange > 0),
-    downregulated = sum(sig_genes$log2FoldChange < 0)
-  ))
+  tryCatch({
+    condition1 <- condition_pair[1]
+    condition2 <- condition_pair[2]
+    
+    cat(sprintf("\nAnalyzing %s vs %s:\n", condition1, condition2))
+    
+    # Create safe filenames
+    safe_name1 <- make_safe_filename(condition1)
+    safe_name2 <- make_safe_filename(condition2)
+    
+    # Get results with padj threshold
+    res <- results(dds, 
+                  contrast = c("physiological_state", condition1, condition2),
+                  alpha = 0.05)
+    
+    # Convert to data frame and filter
+    res_df <- as.data.frame(res)
+    res_df$gene_id <- rownames(res_df)
+    
+    # Print diagnostic info
+    cat(sprintf("Total genes: %d\n", nrow(res_df)))
+    cat(sprintf("Genes with non-NA padj: %d\n", sum(!is.na(res_df$padj))))
+    cat(sprintf("Genes with padj < 0.05: %d\n", sum(res_df$padj < 0.05, na.rm = TRUE)))
+    cat(sprintf("Genes with |log2FC| >= 1: %d\n", sum(abs(res_df$log2FoldChange) >= 1, na.rm = TRUE)))
+    
+    # Filter for significant genes
+    sig_genes <- res_df %>%
+      filter(!is.na(padj), !is.na(log2FoldChange)) %>%
+      filter(padj < 0.05, abs(log2FoldChange) >= 1) %>%
+      arrange(padj)
+    
+    # Create output file path
+    output_file <- file.path(sig_genes_dir, 
+                            paste0("significant_genes_", safe_name1, "vs", safe_name2, ".csv"))
+    
+    # Process and save results
+    if(nrow(sig_genes) > 0) {
+      # Add comparison information
+      sig_genes$comparison <- paste(condition1, "vs", condition2)
+      
+      # Save to CSV
+      write.csv(sig_genes, output_file, row.names = FALSE)
+      
+      # Print summary
+      cat("\nSignificant genes summary:\n")
+      cat(sprintf("- Total significant: %d\n", nrow(sig_genes)))
+      cat(sprintf("- Upregulated: %d\n", sum(sig_genes$log2FoldChange > 0)))
+      cat(sprintf("- Downregulated: %d\n", sum(sig_genes$log2FoldChange < 0)))
+      
+      # Print top genes
+      cat("\nTop 5 most significant genes:\n")
+      print(head(sig_genes[, c("gene_id", "log2FoldChange", "padj")], 5))
+    } else {
+      # Create empty file with headers
+      empty_df <- data.frame(
+        gene_id = character(),
+        baseMean = numeric(),
+        log2FoldChange = numeric(),
+        lfcSE = numeric(),
+        stat = numeric(),
+        pvalue = numeric(),
+        padj = numeric(),
+        comparison = character(),
+        stringsAsFactors = FALSE
+      )
+      write.csv(empty_df, output_file, row.names = FALSE)
+      cat("\nNo genes passed significance thresholds (padj < 0.05 & |log2FC| >= 1)\n")
+    }
+    
+    cat(sprintf("\nResults saved to: %s\n", output_file))
+    
+    return(list(
+      comparison = paste(condition1, "vs", condition2),
+      total_genes = nrow(res),
+      significant_genes = nrow(sig_genes),
+      upregulated = if(nrow(sig_genes) > 0) sum(sig_genes$log2FoldChange > 0) else 0,
+      downregulated = if(nrow(sig_genes) > 0) sum(sig_genes$log2FoldChange < 0) else 0
+    ))
+    
+  }, error = function(e) {
+    cat(sprintf("\nError in analyzing %s vs %s: %s\n", 
+                condition_pair[1], condition_pair[2], as.character(e)))
+    return(list(
+      comparison = paste(condition_pair[1], "vs", condition_pair[2]),
+      total_genes = 0,
+      significant_genes = 0,
+      upregulated = 0,
+      downregulated = 0,
+      error = as.character(e)
+    ))
+  })
 }
 
 # Create log file
-log_file <- file.path(base_dir, paste0("significant_genes_analysis_", format(Sys.time(), "%Y%m%d_%H%M%S"), "_log.txt"))
+log_file <- file.path(base_dir, paste0("significant_DE_genes_analysis_", format(Sys.time(), "%Y%m%d_%H%M%S"), "_log.txt"))
 sink(log_file, split = TRUE)
 
 # Print header
@@ -99,9 +142,8 @@ cat("\n")
 
 # Print analysis parameters
 cat("Analysis Parameters:\n")
-cat("- Significance cutoff (padj): < 0.05\n")
-cat("- Log2 fold change cutoff: >= 1 (absolute value)\n")
-cat("- Using alpha=1 in results() to get all genes\n\n")
+cat("- Significance threshold (padj): < 0.05\n")
+cat("- Log2 fold change threshold: >= 1 (absolute value)\n\n")
 
 # Run analysis
 cat("Processing comparisons...\n")

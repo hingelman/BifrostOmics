@@ -677,3 +677,17 @@ To github.com:hingelman/BifrostOmics.git
  1 file changed, 14 insertions(+)
 To github.com:hingelman/BifrostOmics.git
    d7aa9d8..3a56bbe  main -> main
+[main b7ebfbd] Auto-sync Thu May 29 21:00:01 AEST 2025
+ 13 files changed, 100 insertions(+), 338 deletions(-)
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT1_D0_5vsUT2_D1_Cotox.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT1_D0_5vsUT2_D1nonSS.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT1_D0_5vsUT3_D0_5.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1_CotoxvsUT2_D0_5.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1_CotoxvsUT2_D1nonSS.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1_CotoxvsUT3_D0_5.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT2_D1nonSSvsUT3_D0_5.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_20250529_110200/significant_genes_UT3_D0_5vsUT2_D0_5.csv
+ delete mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_analysis_20250529_110200_log.txt
+ create mode 100644 statisticalandfunctionalanalysis/statisticalandfunctionalanalysis/significant_genes_analysis_20250529_205914_log.txt
+To github.com:hingelman/BifrostOmics.git
+   3a56bbe..b7ebfbd  main -> main
