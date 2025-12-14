@@ -1,4 +1,4 @@
-BifrostOmics ver 0.1 This project bridges omics datasets and bioinformatics with non–computer science users through a collection of reproducible, user-friendly pipelines for diverse omics data types.
+BifrostOmics ver 0.1 This project bridges omics datasets and bioinformatics with non–computer science users through a collection of reproducible, user-friendly pipelines for diverse omics datasets.
 
 RNA-seq Pipeline
 placeholder1
